@@ -2229,7 +2229,7 @@ function pinRound() {
   const map = satMap($("#pinworld"));
   arm(400);
   map.on("click", e => {
-    if (!ready() || G.pinLog[G.pi]) return;
+    if (!ready() || !map.shown || G.pinLog[G.pi]) return; // no pins through the loading card
     const g = e.latlng.wrap(), mi = Math.round(greatCircleMiles(g.lat, g.lng, lat, lon)), pts = pinPoints(mi, t.st, M);
     G.pinLog[G.pi] = { city, mi, pts };
     const dot = cls => L.divIcon({ className: cls, html: "<i></i>", iconSize: [20, 20] });
@@ -2279,7 +2279,7 @@ function satMap(el) {
   const map = L.map(el, { zoomSnap: 0.25, zoomDelta: 1, wheelPxPerZoomLevel: 90, doubleClickZoom: false, attributionControl: false, worldCopyJump: false, maxBounds: world, maxBoundsViscosity: 1, maxZoom: 15 });
   const credit = $("#satcredit");
   let shown = false;
-  const showMap = () => { if (shown) return; shown = true; const w = $("#wload"); if (w) { w.classList.add("gone"); setTimeout(() => w.remove(), 400); } };
+  const showMap = () => { if (shown) return; shown = map.shown = true; arm(300); const w = $("#wload"); if (w) { w.classList.add("gone"); setTimeout(() => w.remove(), 400); } };
   const outline = () => {
     map.createPane("land").style.zIndex = 150;
     L.polygon(WORLD_LAND, { pane: "land", renderer: L.canvas({ pane: "land" }), color: "#9fb3d1", weight: 0.8, fillColor: "#2c4a6e", fillOpacity: 1, interactive: false }).addTo(map);
