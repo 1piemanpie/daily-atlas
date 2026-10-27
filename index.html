@@ -1311,8 +1311,9 @@ function home() {
       ${topics.length ? `<div class="chips">${topics.slice(0, 6).map(topicChip).join("")}</div>` : ""}
       <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px">
         ${res ? `<p class="small muted">You scored ${res.score}/${res.total} here.${state === "today" ? ` Next place unlocks in <b id="countdown">${untilMidnight()}</b>.` : ""}</p>` : ""}
-        ${state === "past" && !res ? `<p class="small muted">You missed this day. Its questions will turn up in Sunday's recap.</p>` : ""}
+        ${state === "past" && !res ? `<p class="small muted">You missed this day, but you can still play it. Catch-up days don't add to your streak.</p>` : ""}
         ${(state === "today" && !res) || state === "open" ? `<button class="btn" style="--c:var(--coral)" id="play">${res ? "Play again (test mode)" : "Let's go!"}</button>` : ""}
+        ${state === "past" && !res ? `<button class="btn" style="--c:var(--coral)" id="play">Play catch-up</button>` : ""}
         ${res && res.log ? `<button class="btn soft" id="review">Review my postcards</button>` : ""}
       </div>
     </div>`}
@@ -1320,7 +1321,7 @@ function home() {
       <button class="btn soft" id="strengths">📊 Strengths</button>
       <button class="btn soft" id="cal2">📅 Calendar</button>
     </div>
-    <p class="note">One new place a day. Past days stay open to review.<br>
+    <p class="note">One new place a day. Missed a day? You can still catch up on it.<br>
       ${S.unlockAll ? `<button class="ghost" id="unlock">Test mode is on: lock days again</button>` : ""}</p>
   </section>`;
   app.querySelectorAll(".day").forEach(b => b.onclick = () => { selectDay(+b.dataset.n); home(); });
@@ -1740,12 +1741,13 @@ function finish() {
   S.res[ymd(dateOf(G.n))] = { day: G.day.id, score, total, grid, pin: pinTotal, log: G.log.map(l => ({ id: l.id, ok: l.ok })) };
   save();
   const p = score / total;
-  const share = `Daily Atlas #${G.n + 1} · ${G.day.name}\n📍 ${pinTotal}/300\n${grid}  ${score}/${total}\n🔥 ${S.streak}-day streak\n${SITE}`;
+  const late = G.n < TODAY;
+  const share = `Daily Atlas #${G.n + 1} · ${G.day.name}${late ? " (catch-up)" : ""}\n📍 ${pinTotal}/300\n${grid}  ${score}/${total}\n${late ? "" : `🔥 ${S.streak}-day streak\n`}${SITE}`;
   app.innerHTML = `<section class="screen">
     ${header()}
     <div class="card" style="display:flex;flex-direction:column;gap:14px">
       <div class="scorebubble"><div><b>${score}/${total}</b><span>correct</span></div></div>
-      <div class="rank"><div class="eyebrow">Today's rank</div><h2>${rankFor(p)}</h2></div>
+      <div class="rank"><div class="eyebrow">${late ? "Catch-up rank" : "Today's rank"}</div><h2>${rankFor(p)}</h2></div>
       <div class="pinsum">${G.pinLog.map(l => `<span><b>${l.pts}</b>${esc(l.city)}</span>`).join("")}<span class="tot"><b>${pinTotal}</b>of 300</span></div>
       <div class="stamp">${esc(G.day.recap ? "Week complete" : G.day.name)}</div>
       <div class="grid" aria-label="Result grid">${grid}</div>
