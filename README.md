@@ -7,6 +7,7 @@ Play it at **https://1piemanpie.github.io/daily-atlas/**
 ## How it's put together
 
 - `src/daily-atlas.html` is the whole game in one file: content, map data, styles and script.
+- `sw.js` is a small service worker for the website that keeps the warm-up's satellite tiles on each device, so the map opens instantly after the first time.
 - `build.py` wraps it into `index.html`, the page GitHub Pages serves. Run `python3 build.py` after any change to `src/`.
 - `content/` holds each week's questions (`*-week.js`) and fact cards (`*-fx.js`) as they were written, before being merged into the game.
 - `mapgen/` has the scripts that turn Natural Earth data into the projected SVG maps (`genworld.mjs` for the world map, one script per regional week map), plus `genpinll.mjs`, which turns the warm-up cities and their landmark hints (`pinhints.json`) into latitude and longitude for the world satellite warm-up.
