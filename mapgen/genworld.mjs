@@ -52,7 +52,7 @@ function subKey(p) {
   if (GROUP_BY_REGION.has(a3) && p.region) return [`${p.iso_a2 !== '-1' ? p.iso_a2 : a3}-R${slug(p.region)}`, EN[p.region] || p.region];
   const iso = p.iso_3166_2 && !p.iso_3166_2.includes('~') && p.iso_3166_2.length > 3 ? p.iso_3166_2 : null;
   if (a3 === 'MEX' && iso) { const c = iso.slice(3), [k, n] = MXN[c] || [c, p.name]; return ['MX-' + k, n]; }
-  return [iso || p.adm1_code, p.name_en || p.name];
+  return [iso || p.adm1_code, p.name_en || p.name || p.gn_name || p.adm1_code];
 }
 
 // one topology of every admin-1 unit, projected first so simplification works in screen units
@@ -66,7 +66,7 @@ for (const f of adm1.features) {
   const id = 'u' + i++;
   geoms[id] = g.geometry;
   const [sk, sn] = subKey(p);
-  meta[id] = { c: cKey[p.adm0_a3], cn: cName[p.adm0_a3], sk, sn };
+  meta[id] = { c: cKey[p.adm0_a3], cn: cName[p.adm0_a3], sk, sn, g: GROUP_BY_REGION.has(p.adm0_a3) ? null : p.region };
 }
 const WEIGHT = +(process.env.WEIGHT || 0.03);
 const topo = simplify(presimplify(topology({ all: { type: 'FeatureCollection', features: Object.entries(geoms).map(([id, g]) => ({ type: 'Feature', id, properties: {}, geometry: g })) } }, 4e5)), WEIGHT);
@@ -112,13 +112,13 @@ function shape(geoms, name, minA, extra = {}) {
 const byCountry = {}, bySub = {};
 for (const [id, m] of Object.entries(meta)) {
   (byCountry[m.c] ||= { n: m.cn, ids: [] }).ids.push(id);
-  (bySub[m.sk] ||= { n: m.sn, c: m.c, ids: [] }).ids.push(id);
+  (bySub[m.sk] ||= { n: m.sn, c: m.c, g: m.g, ids: [] }).ids.push(id);
 }
 const countries = {}, subs = {};
 for (const [k, v] of Object.entries(byCountry)) { const s = shape(v.ids, v.n, 0.02); if (s) countries[k] = s; }
 for (const [k, v] of Object.entries(bySub)) {
   if (byCountry[v.c].ids.length < 2 || Object.values(bySub).filter(s => s.c === v.c).length < 2) continue; // no split for one-unit countries
-  const s = shape(v.ids, v.n, 0.0004, { p: v.c }); if (s) subs[k] = s;
+  const s = shape(v.ids, v.n, 0.0004, v.g ? { p: v.c, g: v.g } : { p: v.c }); if (s) subs[k] = s;
 }
 // subdivisions of countries the game has visited so far ship inside the page; the rest load from data/world-subs.json
 const INLINE = ['US-', 'GB-', 'MX-'];

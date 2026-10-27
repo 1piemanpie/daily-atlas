@@ -5,9 +5,9 @@ If a session runs out before this is done, the next session picks up from the fi
 Branch: `claude/project-thread-ktulnq`. Every change also gets republished to the Claude artifact.
 
 ## Content rules and planning
-- [ ] `plan/rules.md`: standing content rules for every new week (US English audience, easy/hard alternation, recurring places with new facts, subdivision coverage with grouping)
-- [ ] `plan/coverage.json`: every country's first-level subdivisions, grouped where a country has many minor ones, with an easy/hard tier and a visit log
-- [ ] `plan/schedule.md`: upcoming weeks queue, alternating easy and hard regions
+- [x] `plan/rules.md`: standing content rules for every new week (US English audience, easy/hard alternation, recurring places with new facts, subdivision coverage with grouping)
+- [x] `plan/coverage.json`: every country's first-level subdivisions, grouped where a country has many minor ones, with an easy/hard tier and a visit log
+- [x] `plan/schedule.md`: upcoming weeks queue, alternating easy and hard regions
 - [ ] Update the weekly Tuesday scheduled task so its prompt follows these rules
 
 ## Warm-up (pin the city)
@@ -19,8 +19,8 @@ Branch: `claude/project-thread-ktulnq`. Every change also gets republished to th
 - [ ] Real photos (free licenses, from Wikimedia Commons) on fact cards where they help, each with a credit line; hidden where images can't load
 
 ## World map
-- [ ] First-level subdivisions for every country (grouped where needed), shown when zoomed in, like US states today
-- [ ] More detailed country borders
+- [x] First-level subdivisions for every country (grouped where needed), shown when zoomed in, like US states today
+- [x] More detailed country borders
 
 ## Ship
 - [ ] Build `index.html`, playtest in a browser (phone and desktop widths)
