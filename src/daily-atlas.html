@@ -321,6 +321,10 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .lmhint { display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--grape) 12%, var(--card)); border-radius: 16px; padding: 10px 12px; margin: 10px 0 12px; text-align: left; }
 .lmhint .lmi { font-size: 22px; line-height: 1; }
 .lmhint b { display: block; font-family: var(--font-display); font-size: 13px; color: var(--grape); letter-spacing: .02em; text-transform: uppercase; }
+.vphoto { margin: 10px 0 4px; }
+.vphoto img { display: block; max-width: 100%; max-height: 280px; margin: 0 auto; object-fit: contain; border-radius: 18px; background: var(--tile); box-shadow: 0 4px 0 var(--shadow); animation: iconPop .5s var(--pop) both; }
+.vphoto figcaption { font-size: 11px; color: var(--muted); margin-top: 6px; text-align: left; }
+.vphoto figcaption a { color: inherit; }
 .pinresult { display: flex; align-items: center; gap: 14px; }
 .pinresult b { font-family: var(--font-display); font-size: 40px; color: var(--coral); animation: iconPop .5s var(--pop) both; }
 .pinsum { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
@@ -1066,6 +1070,32 @@ function factVb(map, keys) {
   const x = Math.max(0, Math.min(W - w, (Math.max(...xs) + Math.min(...xs)) / 2 - w / 2)), y = Math.max(0, Math.min(H - h, (Math.max(...ys) + Math.min(...ys)) / 2 - h / 2));
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
+/* real photos on fact cards: Wikimedia Commons files, all public domain or free-licensed; the credit line shows under each */
+const PHOTOS = {
+  la2: { f: "Louis_Armstrong_restored.jpg", by: "New York World-Telegram & Sun, Library of Congress", lic: "Public domain" },
+  la10: { f: "Hurricane_Katrina_August_28_2005_NASA.jpg", by: "NASA", lic: "Public domain" },
+  tx4: { f: "Mission_Operations_Control_Room_at_the_conclusion_of_Apollo_11.jpg", by: "NASA", lic: "Public domain" },
+  ny1: { f: "Statueofliberty_nps.jpg", by: "National Park Service", lic: "Public domain" },
+  hi2: { f: "The_USS_Arizona_(BB-39)_burning_after_the_Japanese_attack_on_Pearl_Harbor_-_NARA_-_195617.jpg", by: "U.S. Navy, National Archives", lic: "Public domain" },
+  hi4: { f: "Liliuokalani,_gelatin_silver_print_by_Harris_&_Ewing_Studio,_Object_Number_NPG.84.250,_National_Portrait_Gallery,_Smithsonian_Institution.jpg", by: "Harris & Ewing, National Portrait Gallery, Smithsonian", lic: "Public domain" },
+  hi8: { f: "Duke_Kahanamoku_LCCN2014717339_(cropped).jpg", by: "Library of Congress", lic: "Public domain" },
+  lo1: { f: "The_Great_Fire_of_London,_with_Ludgate_and_Old_St._Paul's_-_Google_Art_Project.jpg", by: "Unknown artist, about 1670, Yale Center for British Art", lic: "Public domain" },
+  sc3: { f: "Alexander_Graham_Bell_1895_NPG_77_363.jpg", by: "1895 photograph, National Portrait Gallery, Smithsonian", lic: "Public domain" },
+  sc10: { f: "PG_1063Burns_Naysmith.jpg", by: "Alexander Nasmyth, 1787, Scottish National Portrait Gallery", lic: "Public domain" },
+  be1: { f: "RMS_Titanic_3.jpg", by: "F. G. O. Stuart, 1912", lic: "Public domain" },
+  du5: { f: "Bram_Stoker_1906.jpg", by: "1906 photograph", lic: "Public domain" },
+  du8: { f: "The_shell_of_the_G.P.O._on_Sackville_Street_after_the_Easter_Rising_(6937669789).jpg", by: "National Library of Ireland", lic: "No known copyright restrictions" },
+  mc1: { f: "Map_of_Tenochtitlan,_1524.jpg", by: "Nuremberg map, 1524", lic: "Public domain" },
+  yu1: { f: "Chicxulub_radar_topography.jpg", by: "NASA/JPL-Caltech", lic: "Public domain" },
+  hv1: { f: "U-2_photo_during_Cuban_Missile_Crisis.jpg", by: "U.S. Air Force", lic: "Public domain" },
+  hv14: { f: "Wreck_of_the_U.S.S._Maine,_ca._1898_-_NARA_-_512929.jpg", by: "National Archives", lic: "Public domain" }
+};
+// a photo that can't load (offline, or a page that blocks outside images) quietly removes itself
+function factPhoto(id) {
+  const p = PHOTOS[id]; if (!p) return "";
+  const src = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(p.f)}?width=960`, page = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(p.f)}`;
+  return `<figure class="viz vphoto"><img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"><figcaption>Photo: ${esc(p.by)} · <a href="${page}" target="_blank" rel="noopener">${esc(p.lic)}</a></figcaption></figure>`;
+}
 function factViz(id, uid) {
   const f = FX[id] || {};
   let out = "";
@@ -1671,7 +1701,7 @@ function answer(q, sure, ok, el) {
     ${q.callback ? `<p class="cbnote">${ok ? "↺ Callback cleared! This one won't come back." : "↺ Still tricky. It'll come back again on a later day."}</p>` : ""}
     ${!ok && sure ? `<p class="surprise">You felt sure about this one. Surprises like this tend to stick, so read the card below.</p>` : ""}
     <div class="fhead"><span class="ficon">${(FX[q.id] || {}).i || "📍"}</span><p class="fh">${headline(q.id)}</p></div>
-    ${factViz(q.id, G.i)}
+    ${factPhoto(q.id)}${factViz(q.id, G.i)}
     <p class="fdetail">${esc(q.fact)}</p>
     <button class="btn" style="--c:var(--grape)" id="next">${last ? "See my results" : "Next question"}</button>
   </div>`;
