@@ -1,86 +1,86 @@
 {
- "_about": "Landmark hints for the pin-the-city warm-up: [hint shown after the tap, landmark longitude, landmark latitude, landmark label]. A hint never names another warm-up city from the same state, so it can't give the next one away. Run `node genhints.mjs` to project these into the game's PIN_HINTS.",
+ "_about": "Landmark hints for the world satellite warm-up: [hint shown after the tap, landmark longitude, landmark latitude, landmark label]. Each hint points at something you can actually see on the satellite map (a river, delta, lake, bay, ridge, volcano, peninsula, moorland or island), never at a border, ruin or name you can't see from space. A hint never names another warm-up city from the same state, so it can't give the next one away. Run `node genpinll.mjs` to turn these into the game's PIN_HINTS.",
  "us": {
   "New Orleans": [
-   "Squeezed between Lake Pontchartrain and a big bend of the Mississippi, near where the river reaches the Gulf.",
+   "Squeezed between round, dark Lake Pontchartrain and a big bend of the Mississippi, about 75 miles upriver from where the river's bird's-foot delta pokes out into the Gulf.",
    -90.1,
    30.19,
    "Lake Pontchartrain"
   ],
   "Baton Rouge": [
-   "On the east bank of the Mississippi, where the river leaves the north–south stretch and starts winding down to the Gulf.",
-   -91.32,
-   30.75,
-   "Mississippi River"
+   "On the winding Mississippi, about 50 miles west of the round, dark Lake Pontchartrain.",
+   -90.4,
+   30.25,
+   "Lake Pontchartrain"
   ],
   "Shreveport": [
-   "Up in Louisiana's northwest corner, on the Red River, about 20 miles from the Texas line.",
-   -94.25,
-   32.5,
-   "Texas line"
+   "Where the Red River's winding green valley crosses Louisiana's northwest corner, about 15 miles east of swampy Caddo Lake.",
+   -94.03,
+   32.71,
+   "Caddo Lake"
   ],
   "Lafayette": [
-   "In the heart of Cajun country, just west of the Atchafalaya Basin, America's largest river swamp.",
+   "Just west of the Atchafalaya Basin, the dark green strip of swamp forest that runs straight down to the Gulf.",
    -91.65,
    30.3,
    "Atchafalaya Basin"
   ],
   "Austin": [
-   "In the middle of Texas, where the Colorado River comes out of the Hill Country lakes like Lake Travis.",
+   "On the Colorado River right where the chain of dark, snaking Hill Country reservoirs (like Lake Travis) ends and the flat farmland begins.",
    -97.92,
    30.42,
    "Lake Travis"
   ],
   "Houston": [
-   "Near the upper Texas coast, about 25 miles inland from Galveston Bay.",
+   "A huge gray sprawl about 25 miles inland from Galveston Bay, the big notched bay behind a long, thin barrier island.",
    -94.85,
    29.5,
    "Galveston Bay"
   ],
   "El Paso": [
-   "At the very western tip of Texas, where the Rio Grande meets New Mexico and Mexico.",
-   -106.6,
-   32.2,
-   "New Mexico"
+   "Where the Rio Grande's thin green ribbon of farms squeezes past the southern tip of the Franklin Mountains, a lone dark ridge in the desert.",
+   -106.48,
+   31.9,
+   "Franklin Mountains"
   ],
   "Dallas": [
-   "In north Texas, about 70 miles south of the Red River, the Oklahoma border.",
-   -96.9,
-   33.85,
-   "Red River"
+   "A huge gray sprawl on the flat north Texas prairie, ringed by reservoirs; Lewisville Lake sits just to the northwest.",
+   -97.0,
+   33.1,
+   "Lewisville Lake"
   ],
   "San Antonio": [
-   "Where the Hill Country meets the south Texas plains, about 140 miles inland from Corpus Christi Bay.",
-   -97.3,
-   27.8,
-   "Corpus Christi Bay"
+   "At the southern edge of the green, rumpled Hill Country, where it drops onto the flat brown south Texas plains, about 30 miles southwest of Canyon Lake.",
+   -98.25,
+   29.87,
+   "Canyon Lake"
   ],
   "Nashville": [
-   "Right in the middle of the state, on a loop of the Cumberland River.",
-   -87.15,
-   36.38,
-   "Cumberland River"
+   "On a twisting loop of the Cumberland River, just west of the dark, branching reservoirs of Percy Priest and Old Hickory lakes.",
+   -86.55,
+   36.1,
+   "Percy Priest Lake"
   ],
   "Memphis": [
-   "In the far southwest corner, on the bluffs above the Mississippi, where Tennessee meets Arkansas and Mississippi.",
-   -90.1,
-   35.55,
+   "On the east bank of the Mississippi, where the river's wide band of green floodplain and crescent-shaped oxbow lakes runs past the bluffs.",
+   -90.15,
+   35.3,
    "Mississippi River"
   ],
   "Knoxville": [
-   "In east Tennessee, about 30 miles northwest of the Great Smoky Mountains.",
+   "On the Tennessee River among east Tennessee's long, striped ridges, about 30 miles northwest of the dark green wall of the Great Smoky Mountains.",
    -83.5,
    35.6,
    "Great Smoky Mountains"
   ],
   "Chattanooga": [
-   "On the southern edge, right on the Georgia line, where the Tennessee River cuts through the mountains.",
-   -85.3,
-   34.85,
-   "Georgia"
+   "Where the Tennessee River makes tight bends through the long, striped ridges, at the foot of Lookout Mountain.",
+   -85.35,
+   34.97,
+   "Lookout Mountain"
   ],
   "Los Angeles": [
-   "On the southern coast where it bends east, around Santa Monica Bay, about 120 miles north of Mexico.",
+   "A giant gray sprawl filling the basin between the San Gabriel Mountains and Santa Monica Bay, where the coast turns east.",
    -118.6,
    33.88,
    "Santa Monica Bay"
@@ -92,16 +92,16 @@
    "San Francisco Bay"
   ],
   "Sacramento": [
-   "Inland in the Central Valley, about 85 miles west of Lake Tahoe, where the Sacramento and American rivers meet.",
-   -120.04,
-   39.09,
-   "Lake Tahoe"
+   "In the flat green-and-tan Central Valley, just north of the Sacramento–San Joaquin Delta, a maze of islands and channels.",
+   -121.6,
+   38.1,
+   "The Delta"
   ],
   "San Diego": [
-   "In the very bottom-left corner of the state, on a sheltered bay right next to the Mexican border.",
-   -116.9,
-   32.35,
-   "Mexico"
+   "Around a hooked bay sheltered by the long Point Loma peninsula, in the very bottom-left corner of the state.",
+   -117.24,
+   32.67,
+   "Point Loma"
   ],
   "New York City": [
    "At the state's southern tip, where the Hudson River meets the Atlantic, right beside Long Island.",
@@ -110,31 +110,31 @@
    "Long Island"
   ],
   "Albany": [
-   "On the Hudson River about 150 miles north of its mouth, near where the Mohawk River joins it.",
-   -73.9,
-   41.75,
-   "Hudson River"
+   "On the Hudson, just below where the Mohawk River comes in from the west through its long valley, with the dark green Adirondacks rising to the north.",
+   -73.68,
+   42.78,
+   "Mohawk River"
   ],
   "Buffalo": [
-   "At the far western end of the state, at the eastern tip of Lake Erie, near Niagara Falls.",
+   "At the eastern tip of Lake Erie, where the Niagara River runs north to Lake Ontario.",
    -79.4,
    42.6,
    "Lake Erie"
   ],
   "Syracuse": [
-   "In the middle of upstate, between Lake Ontario and the long, thin Finger Lakes.",
+   "Between Lake Ontario and the long, thin, parallel Finger Lakes that look like claw scratches from space.",
    -76.75,
    42.65,
    "Finger Lakes"
   ],
   "Honolulu": [
-   "On the south shore of Oʻahu, just east of Pearl Harbor and next to Diamond Head.",
+   "On the south shore of Oʻahu, between the branching inlets of Pearl Harbor and the round crater of Diamond Head.",
    -157.97,
    21.37,
    "Pearl Harbor"
   ],
   "Hilo": [
-   "On the wet east side of the Big Island, below the volcano Mauna Kea.",
+   "On a curved bay on the Big Island's wet, green east side, below the long slopes of Mauna Kea.",
    -155.47,
    19.82,
    "Mauna Kea"
@@ -146,7 +146,7 @@
    "Lānaʻi"
   ],
   "Kailua-Kona": [
-   "On the dry, sunny west coast of the Big Island, at the foot of Hualālai volcano.",
+   "On the Big Island's dry west coast, where black lava flows from Hualālai volcano run down to the sea.",
    -155.87,
    19.69,
    "Hualālai"
@@ -154,28 +154,28 @@
  },
  "uk": {
   "London": [
-   "In the southeast, on the Thames, about 50 miles upriver from where it widens into the estuary.",
+   "A huge gray sprawl on the Thames, about 50 miles upriver from where it widens into its funnel-shaped estuary.",
    0.8,
    51.5,
    "Thames Estuary"
   ],
   "Birmingham": [
-   "Right in the middle of England, in the Midlands, far from any coast.",
-   -1.55,
-   52.75,
-   "The Midlands"
+   "A big gray sprawl right in the middle of England, about 45 miles south of the Peak District's dark moorland.",
+   -1.85,
+   53.1,
+   "Peak District"
   ],
   "Manchester": [
-   "In the northwest, at the western foot of the Pennine hills, the 'backbone of England'.",
+   "A big gray sprawl at the western foot of the Pennines, the dark brown moorland spine running up northern England.",
    -2.0,
    53.65,
    "The Pennines"
   ],
   "Liverpool": [
-   "On the northwest coast, at the mouth of the River Mersey, facing the Irish Sea.",
-   -3.6,
-   53.65,
-   "Irish Sea"
+   "At the mouth of the River Mersey, the wide estuary opening into the Irish Sea beside the stubby Wirral peninsula.",
+   -2.85,
+   53.33,
+   "Mersey Estuary"
   ],
   "Leeds": [
    "In Yorkshire, on the east side of the Pennines, just southeast of the Yorkshire Dales.",
@@ -202,25 +202,25 @@
    "Peak District"
   ],
   "Nottingham": [
-   "In the East Midlands on the River Trent, just south of Sherwood Forest, Robin Hood country.",
-   -1.07,
-   53.2,
-   "Sherwood Forest"
+   "On the River Trent in flat farmland, about 20 miles east of the Peak District's dark hills.",
+   -1.7,
+   53.15,
+   "Peak District"
   ],
   "Plymouth": [
-   "On the south coast of Devon, just south of the wild moorland of Dartmoor, near the Cornwall border.",
+   "On the south coast at a branching inlet, just south of the big brown patch of Dartmoor's moorland.",
    -3.9,
    50.57,
    "Dartmoor"
   ],
   "Norwich": [
-   "In East Anglia, the bulge on England's east side, just west of the Norfolk Broads.",
+   "In the round bulge of East Anglia, just west of the Norfolk Broads, a maze of small lakes and rivers near the coast.",
    1.55,
    52.7,
    "Norfolk Broads"
   ],
   "York": [
-   "In the flat Vale of York, about 25 miles southwest of the North York Moors.",
+   "In the flat green Vale of York, about 25 miles southwest of the dark heather of the North York Moors.",
    -0.9,
    54.35,
    "North York Moors"
@@ -232,19 +232,19 @@
    "Cotswolds"
   ],
   "Cambridge": [
-   "At the southern edge of the Fens, the flat drained marshland that runs up to the Wash.",
+   "At the southern edge of the Fens, the dead-flat, ruler-straight fields that run up to the square bay of the Wash.",
    0.1,
    52.5,
    "The Fens"
   ],
   "Brighton": [
-   "On the south coast, straight below London, at the foot of the South Downs hills.",
+   "On the south coast at the foot of the South Downs, a long bare chalk ridge running east to west.",
    -0.5,
    50.93,
    "South Downs"
   ],
   "Southampton": [
-   "On the south coast, at the head of a long inlet just north of the Isle of Wight.",
+   "At the head of a long, straight inlet, Southampton Water, just north of the diamond-shaped Isle of Wight.",
    -1.3,
    50.67,
    "Isle of Wight"
@@ -256,10 +256,10 @@
    "Strait of Dover"
   ],
   "Carlisle": [
-   "In the far northwest, a few miles from the Scottish border, just north of the Lake District.",
-   -3.1,
-   54.45,
-   "Lake District"
+   "At the head of the Solway Firth, the wide tidal estuary between England and Scotland, just north of the Lake District's mountains.",
+   -3.4,
+   54.9,
+   "Solway Firth"
   ],
   "Canterbury": [
    "In Kent, England's southeast corner, about 10 miles south of the mouth of the Thames Estuary.",
@@ -280,10 +280,10 @@
    "Firth of Clyde"
   ],
   "Aberdeen": [
-   "On the northeast coast, where Scotland's shoulder bulges out into the North Sea.",
-   -1.5,
-   57.2,
-   "North Sea"
+   "On the northeast coast at the mouth of the River Dee, about 60 miles east of the dark, often snowy Cairngorm mountains.",
+   -3.65,
+   57.08,
+   "Cairngorms"
   ],
   "Dundee": [
    "On the north shore of the Firth of Tay, on the east coast.",
@@ -292,7 +292,7 @@
    "Firth of Tay"
   ],
   "Inverness": [
-   "At the northern end of Loch Ness and the Great Glen, where they meet the Moray Firth.",
+   "Where the long, dead-straight dark line of Loch Ness and the Great Glen meets the Moray Firth.",
    -4.5,
    57.3,
    "Loch Ness"
@@ -358,10 +358,10 @@
    "Severn Estuary"
   ],
   "Wrexham": [
-   "In the northeast corner, right by the English border, just south of Chester.",
-   -2.89,
-   53.19,
-   "Chester (England)"
+   "Where the green Welsh hills drop onto the flat Cheshire plain, about 20 miles south of the Dee estuary's wide, sandy mouth.",
+   -3.15,
+   53.3,
+   "Dee Estuary"
   ],
   "Bangor": [
    "On the north coast at the Menai Strait, looking across to the island of Anglesey.",
@@ -430,10 +430,10 @@
    "Lough Neagh"
   ],
   "Newry": [
-   "In the far southeast on the border, just west of the Mourne Mountains.",
-   -6.0,
-   54.18,
-   "Mourne Mountains"
+   "At the head of Carlingford Lough, the narrow sea inlet just west of the dark Mourne Mountains.",
+   -6.2,
+   54.05,
+   "Carlingford Lough"
   ],
   "Enniskillen": [
    "In the southwest, on the island between Upper and Lower Lough Erne.",
@@ -478,10 +478,10 @@
    "Strangford Lough"
   ],
   "Dublin": [
-   "Halfway down the east coast, on Dublin Bay, facing Wales across the Irish Sea.",
-   -5.5,
-   53.3,
-   "Irish Sea"
+   "Halfway down the east coast on Dublin Bay, just north of the dark Wicklow Mountains.",
+   -6.4,
+   53.05,
+   "Wicklow Mountains"
   ],
   "Cork": [
    "On the south coast, at the head of Cork Harbour, one of the world's biggest natural harbors.",
@@ -558,7 +558,7 @@
  },
  "mx": {
   "Mexico City": [
-   "In a high valley in the center of the country, about 40 miles northwest of the volcano Popocatépetl.",
+   "A vast gray sprawl filling a high valley, about 40 miles northwest of the snowy volcano Popocatépetl.",
    -98.62,
    19.02,
    "Popocatépetl"
@@ -588,10 +588,10 @@
    "Sierra Gorda"
   ],
   "Pachuca": [
-   "In the hills about 30 miles north of the Teotihuacan pyramids.",
-   -98.84,
-   19.69,
-   "Teotihuacan"
+   "At the foot of the forested Sierra de Pachuca, on the edge of the dry, tan Mezquital valley.",
+   -98.73,
+   20.18,
+   "Sierra de Pachuca"
   ],
   "Tlaxcala": [
    "Just west of La Malinche volcano, in Mexico's smallest state.",
@@ -600,10 +600,10 @@
    "La Malinche"
   ],
   "Morelia": [
-   "In Michoacán, about 30 miles east of Lake Pátzcuaro.",
-   -101.65,
-   19.58,
-   "Lake Pátzcuaro"
+   "About 20 miles south of Lake Cuitzeo, a big, shallow, muddy-colored lake.",
+   -101.15,
+   19.95,
+   "Lake Cuitzeo"
   ],
   "Taxco": [
    "Up in the silver-mining mountains of northern Guerrero, about 40 miles south of the Nevado de Toluca volcano.",
@@ -612,10 +612,10 @@
    "Nevado de Toluca"
   ],
   "Acapulco": [
-   "On the Pacific coast, almost straight south of the capital, around a horseshoe-shaped bay.",
-   -99.9,
-   16.6,
-   "Pacific Ocean"
+   "On the Pacific coast, almost straight south of the capital, wrapped around a horseshoe-shaped bay.",
+   -99.88,
+   16.84,
+   "Acapulco Bay"
   ],
   "Veracruz": [
    "On the Gulf of Mexico coast, about 75 miles east of Pico de Orizaba, Mexico's highest peak.",
@@ -630,19 +630,19 @@
    "Cofre de Perote"
   ],
   "Guanajuato": [
-   "Tucked in a ravine in the Bajío, the fertile highlands northwest of the capital.",
+   "In the rumpled Sierra de Guanajuato hills, just above the Bajío, a flat patchwork of green farm fields.",
    -101.0,
    20.6,
    "The Bajío"
   ],
   "Mérida": [
-   "In the northwest of the Yucatán Peninsula, about 20 miles inland from the Gulf of Mexico.",
+   "In the flat, green-brown northwest of the Yucatán, about 20 miles inland from the Gulf coast's thin lagoons.",
    -89.8,
-   21.65,
-   "Gulf of Mexico"
+   21.3,
+   "Gulf coast lagoons"
   ],
   "Cancún": [
-   "At the peninsula's northeast corner, where the Gulf meets the Caribbean, just across from Isla Mujeres.",
+   "At the peninsula's northeast corner, beside a thin sandbar shaped like a 7, across from the long, skinny Isla Mujeres.",
    -86.73,
    21.23,
    "Isla Mujeres"
@@ -654,40 +654,40 @@
    "Bay of Campeche"
   ],
   "Chetumal": [
-   "In the far southeast, right on the Belize border at the mouth of the Hondo River.",
-   -88.5,
-   17.6,
-   "Belize"
+   "At the head of a big sheltered bay on the Caribbean coast, behind a long peninsula, near the peninsula's southern end.",
+   -88.15,
+   18.3,
+   "Chetumal Bay"
   ],
   "Valladolid": [
-   "In the middle of the peninsula's north, about 25 miles east of the ruins of Chichén Itzá.",
-   -88.57,
-   20.68,
-   "Chichén Itzá"
+   "In the middle of the flat, jungle-covered north of the peninsula, about 60 miles south of the pink Ría Lagartos lagoons.",
+   -88.1,
+   21.57,
+   "Ría Lagartos"
   ],
   "Playa del Carmen": [
-   "On the Caribbean coast, about 35 miles south of the peninsula's northeast corner.",
-   -86.6,
-   20.45,
-   "Caribbean Sea"
+   "On the Caribbean coast's straight line of white beaches, about 35 miles south of the peninsula's northeast corner.",
+   -86.95,
+   20.6,
+   "Caribbean coast"
   ],
   "Tulum": [
-   "On the Caribbean coast, Maya ruins on a cliff at the north edge of the Sian Ka'an reserve.",
+   "On the Caribbean coast, at the north edge of Sian Ka'an, a huge reserve of lagoons and wetlands.",
    -87.6,
    19.7,
    "Sian Ka'an"
   ],
   "Progreso": [
-   "On the north coast of the peninsula, the port on the Gulf of Mexico.",
+   "On the north coast of the peninsula, where the shallow turquoise Gulf of Mexico meets a strip of thin lagoons.",
    -89.8,
-   21.65,
+   21.4,
    "Gulf of Mexico"
   ],
   "Izamal": [
-   "The 'yellow city', about 35 miles northwest of Chichén Itzá.",
-   -88.57,
-   20.68,
-   "Chichén Itzá"
+   "In the flat north-central Yucatán, about 28 miles inland from the Gulf coast's thin lagoons.",
+   -88.95,
+   21.33,
+   "Gulf coast lagoons"
   ],
   "Ciudad del Carmen": [
    "On a long island between the Gulf and the Laguna de Términos, at the southwest base of the peninsula.",
@@ -702,10 +702,10 @@
    "Caribbean Sea"
   ],
   "Bacalar": [
-   "In the south on the long 'lake of seven colors', about 15 miles from Belize.",
-   -88.5,
-   17.6,
-   "Belize"
+   "On a long, thin, turquoise lagoon running parallel to the Caribbean coast, near the peninsula's southern end.",
+   -88.35,
+   18.7,
+   "Bacalar Lagoon"
   ],
   "Tizimín": [
    "In the northeast, about 30 miles inland from the Ría Lagartos flamingo lagoon.",
@@ -738,10 +738,10 @@
    "Colima volcano"
   ],
   "Manzanillo": [
-   "On the Pacific coast of the small state of Colima: Mexico's busiest port.",
-   -104.6,
-   18.9,
-   "Pacific Ocean"
+   "On the Pacific between two round bays, at the north end of the long Cuyutlán lagoon that runs down the coast.",
+   -104.1,
+   18.95,
+   "Cuyutlán Lagoon"
   ],
   "Tepic": [
    "In Nayarit, beside the Sangangüey volcano, about 30 miles inland from the Pacific.",
@@ -750,10 +750,10 @@
    "Sangangüey"
   ],
   "Aguascalientes": [
-   "On the high central plateau, capital of one of Mexico's smallest states, which shares its name.",
-   -102.0,
-   22.3,
-   "Central plateau"
+   "On the high, dry, tan central plateau, about 120 miles north-northeast of big blue Lake Chapala.",
+   -103.0,
+   20.2,
+   "Lake Chapala"
   ],
   "Zacatecas": [
    "In the high, dry north-central country, east of the Sierra Madre Occidental mountains.",
@@ -768,10 +768,10 @@
    "Lake Chapala"
   ],
   "Lagos de Moreno": [
-   "In the Los Altos highlands of Jalisco, on the old silver road north.",
-   -102.3,
-   21.0,
-   "Los Altos"
+   "On the high, dry, tan plateau, about 100 miles northeast of big blue Lake Chapala.",
+   -103.0,
+   20.2,
+   "Lake Chapala"
   ],
   "Ciudad Guzmán": [
    "On the shore of Lake Zapotlán, just northeast of the Colima volcano.",
@@ -786,7 +786,7 @@
    "Lake Chapala"
   ],
   "Havana": [
-   "On the north coast of western Cuba, only about 100 miles south of the Florida Keys.",
+   "On the north coast of long, thin Cuba's western end, about 100 miles south of the curving chain of the Florida Keys.",
    -81.5,
    24.6,
    "Florida Keys"
@@ -804,7 +804,7 @@
    "Cayo Romano"
   ],
   "Holguín": [
-   "In the northeast, about 30 miles inland from Bariay Bay, where Columbus first landed in Cuba.",
+   "On the plains in the northeast, about 30 miles inland from the north coast's ragged, notched bays, like Bariay Bay.",
    -75.8,
    21.07,
    "Bariay Bay"
@@ -840,10 +840,10 @@
    "Straits of Florida"
   ],
   "Pinar del Río": [
-   "In the far west, just south of the limestone hills of the Viñales valley.",
-   -83.71,
-   22.62,
-   "Viñales"
+   "In the far west, just south of the dark green Sierra de los Órganos hills.",
+   -83.7,
+   22.65,
+   "Sierra de los Órganos"
   ],
   "Guantánamo": [
    "Near the island's southeast tip, just inland from Guantánamo Bay.",
@@ -870,16 +870,16 @@
    "Blue Mountains"
   ],
   "Montego Bay": [
-   "On the northwest coast, facing the open Caribbean toward Cuba.",
-   -77.9,
-   18.75,
-   "Caribbean Sea"
+   "On the northwest coast, at a big curved bay facing the open Caribbean.",
+   -77.93,
+   18.48,
+   "Montego Bay"
   ],
   "Ocho Rios": [
-   "In the middle of the north coast, by Dunn's River Falls.",
-   -77.14,
-   18.41,
-   "Dunn's River Falls"
+   "In the middle of the north coast, where green hills drop straight into the sea, about 40 miles northwest of the dark Blue Mountains.",
+   -76.58,
+   18.05,
+   "Blue Mountains"
   ],
   "Negril": [
    "At the island's far western tip, along Seven Mile Beach.",
@@ -912,7 +912,7 @@
    "Portland Bight"
   ],
   "Falmouth": [
-   "On the north coast, beside the glowing Luminous Lagoon.",
+   "On the north coast at the mouth of the Martha Brae River, beside a small, shallow lagoon.",
    -77.63,
    18.5,
    "Luminous Lagoon"
@@ -936,16 +936,16 @@
    "Blue Mountains"
   ],
   "San Juan": [
-   "On the north coast near the east end, facing the Atlantic Ocean.",
-   -66.1,
-   18.6,
-   "Atlantic Ocean"
+   "On the north coast near the east end, around a big sheltered bay facing the Atlantic.",
+   -66.12,
+   18.44,
+   "San Juan Bay"
   ],
   "Ponce": [
-   "In the middle of the south coast, facing the Caribbean.",
+   "In the middle of the south coast, facing the Caribbean, below the green Cordillera Central mountains.",
    -66.6,
-   17.85,
-   "Caribbean Sea"
+   18.17,
+   "Cordillera Central"
   ],
   "Mayagüez": [
    "On the west coast, facing the Mona Passage toward the Dominican Republic.",
@@ -954,10 +954,10 @@
    "Mona Passage"
   ],
   "Arecibo": [
-   "On the north coast west of the middle; the famous Arecibo radio telescope was just inland.",
+   "On the north coast where the Río Grande de Arecibo comes out of the green, pitted karst hills.",
    -66.75,
-   18.34,
-   "Arecibo telescope"
+   18.35,
+   "Karst hills"
   ],
   "Caguas": [
    "In a valley in the east-central interior, about 20 miles southwest of the El Yunque rainforest.",
