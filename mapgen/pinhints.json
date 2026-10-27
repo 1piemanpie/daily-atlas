@@ -1,0 +1,1017 @@
+{
+ "_about": "Landmark hints for the pin-the-city warm-up: [hint shown after the tap, landmark longitude, landmark latitude, landmark label]. A hint never names another warm-up city from the same state, so it can't give the next one away. Run `node genhints.mjs` to project these into the game's PIN_HINTS.",
+ "us": {
+  "New Orleans": [
+   "Squeezed between Lake Pontchartrain and a big bend of the Mississippi, near where the river reaches the Gulf.",
+   -90.1,
+   30.19,
+   "Lake Pontchartrain"
+  ],
+  "Baton Rouge": [
+   "On the east bank of the Mississippi, where the river leaves the north–south stretch and starts winding down to the Gulf.",
+   -91.32,
+   30.75,
+   "Mississippi River"
+  ],
+  "Shreveport": [
+   "Up in Louisiana's northwest corner, on the Red River, about 20 miles from the Texas line.",
+   -94.25,
+   32.5,
+   "Texas line"
+  ],
+  "Lafayette": [
+   "In the heart of Cajun country, just west of the Atchafalaya Basin, America's largest river swamp.",
+   -91.65,
+   30.3,
+   "Atchafalaya Basin"
+  ],
+  "Austin": [
+   "In the middle of Texas, where the Colorado River comes out of the Hill Country lakes like Lake Travis.",
+   -97.92,
+   30.42,
+   "Lake Travis"
+  ],
+  "Houston": [
+   "Near the upper Texas coast, about 25 miles inland from Galveston Bay.",
+   -94.85,
+   29.5,
+   "Galveston Bay"
+  ],
+  "El Paso": [
+   "At the very western tip of Texas, where the Rio Grande meets New Mexico and Mexico.",
+   -106.6,
+   32.2,
+   "New Mexico"
+  ],
+  "Dallas": [
+   "In north Texas, about 70 miles south of the Red River, the Oklahoma border.",
+   -96.9,
+   33.85,
+   "Red River"
+  ],
+  "San Antonio": [
+   "Where the Hill Country meets the south Texas plains, about 140 miles inland from Corpus Christi Bay.",
+   -97.3,
+   27.8,
+   "Corpus Christi Bay"
+  ],
+  "Nashville": [
+   "Right in the middle of the state, on a loop of the Cumberland River.",
+   -87.15,
+   36.38,
+   "Cumberland River"
+  ],
+  "Memphis": [
+   "In the far southwest corner, on the bluffs above the Mississippi, where Tennessee meets Arkansas and Mississippi.",
+   -90.1,
+   35.55,
+   "Mississippi River"
+  ],
+  "Knoxville": [
+   "In east Tennessee, about 30 miles northwest of the Great Smoky Mountains.",
+   -83.5,
+   35.6,
+   "Great Smoky Mountains"
+  ],
+  "Chattanooga": [
+   "On the southern edge, right on the Georgia line, where the Tennessee River cuts through the mountains.",
+   -85.3,
+   34.85,
+   "Georgia"
+  ],
+  "Los Angeles": [
+   "On the southern coast where it bends east, around Santa Monica Bay, about 120 miles north of Mexico.",
+   -118.6,
+   33.88,
+   "Santa Monica Bay"
+  ],
+  "San Francisco": [
+   "On the big bay halfway up California's coast, at the tip of the peninsula between the bay and the Pacific.",
+   -122.25,
+   37.68,
+   "San Francisco Bay"
+  ],
+  "Sacramento": [
+   "Inland in the Central Valley, about 85 miles west of Lake Tahoe, where the Sacramento and American rivers meet.",
+   -120.04,
+   39.09,
+   "Lake Tahoe"
+  ],
+  "San Diego": [
+   "In the very bottom-left corner of the state, on a sheltered bay right next to the Mexican border.",
+   -116.9,
+   32.35,
+   "Mexico"
+  ],
+  "New York City": [
+   "At the state's southern tip, where the Hudson River meets the Atlantic, right beside Long Island.",
+   -73.0,
+   40.8,
+   "Long Island"
+  ],
+  "Albany": [
+   "On the Hudson River about 150 miles north of its mouth, near where the Mohawk River joins it.",
+   -73.9,
+   41.75,
+   "Hudson River"
+  ],
+  "Buffalo": [
+   "At the far western end of the state, at the eastern tip of Lake Erie, near Niagara Falls.",
+   -79.4,
+   42.6,
+   "Lake Erie"
+  ],
+  "Syracuse": [
+   "In the middle of upstate, between Lake Ontario and the long, thin Finger Lakes.",
+   -76.75,
+   42.65,
+   "Finger Lakes"
+  ],
+  "Honolulu": [
+   "On the south shore of Oʻahu, just east of Pearl Harbor and next to Diamond Head.",
+   -157.97,
+   21.37,
+   "Pearl Harbor"
+  ],
+  "Hilo": [
+   "On the wet east side of the Big Island, below the volcano Mauna Kea.",
+   -155.47,
+   19.82,
+   "Mauna Kea"
+  ],
+  "Lahaina": [
+   "On the west coast of Maui, looking across the channel at the island of Lānaʻi.",
+   -156.93,
+   20.83,
+   "Lānaʻi"
+  ],
+  "Kailua-Kona": [
+   "On the dry, sunny west coast of the Big Island, at the foot of Hualālai volcano.",
+   -155.87,
+   19.69,
+   "Hualālai"
+  ]
+ },
+ "uk": {
+  "London": [
+   "In the southeast, on the Thames, about 50 miles upriver from where it widens into the estuary.",
+   0.8,
+   51.5,
+   "Thames Estuary"
+  ],
+  "Birmingham": [
+   "Right in the middle of England, in the Midlands, far from any coast.",
+   -1.55,
+   52.75,
+   "The Midlands"
+  ],
+  "Manchester": [
+   "In the northwest, at the western foot of the Pennine hills, the 'backbone of England'.",
+   -2.0,
+   53.65,
+   "The Pennines"
+  ],
+  "Liverpool": [
+   "On the northwest coast, at the mouth of the River Mersey, facing the Irish Sea.",
+   -3.6,
+   53.65,
+   "Irish Sea"
+  ],
+  "Leeds": [
+   "In Yorkshire, on the east side of the Pennines, just southeast of the Yorkshire Dales.",
+   -2.0,
+   54.25,
+   "Yorkshire Dales"
+  ],
+  "Newcastle": [
+   "In the northeast, on the River Tyne just before it reaches the North Sea, about 60 miles south of Scotland.",
+   -1.0,
+   55.05,
+   "North Sea"
+  ],
+  "Bristol": [
+   "In the southwest, where the Severn estuary opens into the Bristol Channel, with Wales across the water.",
+   -3.45,
+   51.3,
+   "Bristol Channel"
+  ],
+  "Sheffield": [
+   "In South Yorkshire, on the eastern edge of the Peak District hills.",
+   -1.8,
+   53.3,
+   "Peak District"
+  ],
+  "Nottingham": [
+   "In the East Midlands on the River Trent, just south of Sherwood Forest, Robin Hood country.",
+   -1.07,
+   53.2,
+   "Sherwood Forest"
+  ],
+  "Plymouth": [
+   "On the south coast of Devon, just south of the wild moorland of Dartmoor, near the Cornwall border.",
+   -3.9,
+   50.57,
+   "Dartmoor"
+  ],
+  "Norwich": [
+   "In East Anglia, the bulge on England's east side, just west of the Norfolk Broads.",
+   1.55,
+   52.7,
+   "Norfolk Broads"
+  ],
+  "York": [
+   "In the flat Vale of York, about 25 miles southwest of the North York Moors.",
+   -0.9,
+   54.35,
+   "North York Moors"
+  ],
+  "Oxford": [
+   "On the upper Thames, at the eastern edge of the Cotswold hills.",
+   -1.85,
+   51.85,
+   "Cotswolds"
+  ],
+  "Cambridge": [
+   "At the southern edge of the Fens, the flat drained marshland that runs up to the Wash.",
+   0.1,
+   52.5,
+   "The Fens"
+  ],
+  "Brighton": [
+   "On the south coast, straight below London, at the foot of the South Downs hills.",
+   -0.5,
+   50.93,
+   "South Downs"
+  ],
+  "Southampton": [
+   "On the south coast, at the head of a long inlet just north of the Isle of Wight.",
+   -1.3,
+   50.67,
+   "Isle of Wight"
+  ],
+  "Dover": [
+   "At England's southeast tip, the closest point to France, by the White Cliffs.",
+   1.45,
+   51.0,
+   "Strait of Dover"
+  ],
+  "Carlisle": [
+   "In the far northwest, a few miles from the Scottish border, just north of the Lake District.",
+   -3.1,
+   54.45,
+   "Lake District"
+  ],
+  "Canterbury": [
+   "In Kent, England's southeast corner, about 10 miles south of the mouth of the Thames Estuary.",
+   1.0,
+   51.5,
+   "Thames Estuary"
+  ],
+  "Edinburgh": [
+   "On the south shore of the Firth of Forth, the big inlet on Scotland's east coast.",
+   -3.0,
+   56.07,
+   "Firth of Forth"
+  ],
+  "Glasgow": [
+   "On the River Clyde in the west, just inland from where it opens into the Firth of Clyde.",
+   -5.0,
+   55.6,
+   "Firth of Clyde"
+  ],
+  "Aberdeen": [
+   "On the northeast coast, where Scotland's shoulder bulges out into the North Sea.",
+   -1.5,
+   57.2,
+   "North Sea"
+  ],
+  "Dundee": [
+   "On the north shore of the Firth of Tay, on the east coast.",
+   -3.0,
+   56.4,
+   "Firth of Tay"
+  ],
+  "Inverness": [
+   "At the northern end of Loch Ness and the Great Glen, where they meet the Moray Firth.",
+   -4.5,
+   57.3,
+   "Loch Ness"
+  ],
+  "Stirling": [
+   "At Scotland's narrow waist, where the River Forth widens into the Firth of Forth.",
+   -3.45,
+   56.03,
+   "Firth of Forth"
+  ],
+  "Perth": [
+   "On the River Tay at the edge of the Highlands, a few miles upriver from the Firth of Tay.",
+   -3.0,
+   56.4,
+   "Firth of Tay"
+  ],
+  "Fort William": [
+   "At the southwest end of the Great Glen, beneath Ben Nevis, Britain's highest mountain.",
+   -5.0,
+   56.8,
+   "Ben Nevis"
+  ],
+  "St Andrews": [
+   "On the east coast of Fife, the peninsula between the Firth of Forth and the Firth of Tay.",
+   -3.0,
+   56.4,
+   "Firth of Tay"
+  ],
+  "Oban": [
+   "On the west coast, looking out at the Isle of Mull, the 'gateway to the Isles'.",
+   -6.0,
+   56.45,
+   "Isle of Mull"
+  ],
+  "Kirkwall": [
+   "On Orkney, the islands just across the Pentland Firth from mainland Scotland's northern tip.",
+   -3.1,
+   58.68,
+   "Pentland Firth"
+  ],
+  "Lerwick": [
+   "On Shetland, the northernmost islands, more than 100 miles north of the mainland, past Orkney.",
+   -3.0,
+   59.0,
+   "Orkney"
+  ],
+  "Cardiff": [
+   "On the south coast, on the Bristol Channel, with England across the water.",
+   -3.45,
+   51.3,
+   "Bristol Channel"
+  ],
+  "Swansea": [
+   "On the south coast, on a wide bay at the base of the Gower Peninsula.",
+   -4.15,
+   51.58,
+   "Gower Peninsula"
+  ],
+  "Newport": [
+   "In the southeast corner, by the mouth of the Severn, where the bridges cross into England.",
+   -2.7,
+   51.57,
+   "Severn Estuary"
+  ],
+  "Wrexham": [
+   "In the northeast corner, right by the English border, just south of Chester.",
+   -2.89,
+   53.19,
+   "Chester (England)"
+  ],
+  "Bangor": [
+   "On the north coast at the Menai Strait, looking across to the island of Anglesey.",
+   -4.35,
+   53.28,
+   "Anglesey"
+  ],
+  "Aberystwyth": [
+   "Halfway down the long west coast, in the middle of Cardigan Bay.",
+   -4.45,
+   52.4,
+   "Cardigan Bay"
+  ],
+  "Holyhead": [
+   "On Holy Island off Anglesey's west tip, the ferry port for Ireland.",
+   -4.35,
+   53.28,
+   "Anglesey"
+  ],
+  "St Davids": [
+   "At the very tip of the southwest peninsula, Pembrokeshire, beside St Brides Bay.",
+   -5.25,
+   51.8,
+   "St Brides Bay"
+  ],
+  "Caernarfon": [
+   "On the Menai Strait across from Anglesey, at the foot of Snowdon, Wales's highest peak.",
+   -4.08,
+   53.07,
+   "Snowdon"
+  ],
+  "Llandudno": [
+   "On the north coast between the Great Orme and Little Orme headlands, on Liverpool Bay.",
+   -3.6,
+   53.5,
+   "Liverpool Bay"
+  ],
+  "Brecon": [
+   "In the middle of south Wales, at the foot of the Brecon Beacons mountains.",
+   -3.44,
+   51.88,
+   "Brecon Beacons"
+  ],
+  "Carmarthen": [
+   "In the southwest, on the River Tywi, just inland from Carmarthen Bay.",
+   -4.5,
+   51.65,
+   "Carmarthen Bay"
+  ],
+  "Belfast": [
+   "At the head of Belfast Lough, the inlet on the east coast that faces Scotland.",
+   -5.75,
+   54.68,
+   "Belfast Lough"
+  ],
+  "Derry": [
+   "In the northwest, on the River Foyle just before it widens into Lough Foyle, right by the border with the Republic.",
+   -7.1,
+   55.1,
+   "Lough Foyle"
+  ],
+  "Armagh": [
+   "In the south, about 10 miles south of Lough Neagh, the biggest lake in the British Isles.",
+   -6.45,
+   54.6,
+   "Lough Neagh"
+  ],
+  "Newry": [
+   "In the far southeast on the border, just west of the Mourne Mountains.",
+   -6.0,
+   54.18,
+   "Mourne Mountains"
+  ],
+  "Enniskillen": [
+   "In the southwest, on the island between Upper and Lower Lough Erne.",
+   -7.75,
+   54.42,
+   "Lough Erne"
+  ],
+  "Omagh": [
+   "In the west, in County Tyrone, just south of the Sperrin Mountains.",
+   -7.1,
+   54.8,
+   "Sperrin Mountains"
+  ],
+  "Coleraine": [
+   "A few miles inland from the north coast on the River Bann, east of Lough Foyle.",
+   -7.1,
+   55.1,
+   "Lough Foyle"
+  ],
+  "Ballymena": [
+   "In County Antrim, about 10 miles north of Lough Neagh.",
+   -6.45,
+   54.6,
+   "Lough Neagh"
+  ],
+  "Bushmills": [
+   "On the north coast by the Giant's Causeway, facing Rathlin Island.",
+   -6.2,
+   55.29,
+   "Rathlin Island"
+  ],
+  "Lisburn": [
+   "About 10 miles east of Lough Neagh's southeast shore, on the River Lagan.",
+   -6.45,
+   54.6,
+   "Lough Neagh"
+  ],
+  "Downpatrick": [
+   "Near the east coast, at the southern end of Strangford Lough, where St Patrick is said to be buried.",
+   -5.6,
+   54.45,
+   "Strangford Lough"
+  ],
+  "Dublin": [
+   "Halfway down the east coast, on Dublin Bay, facing Wales across the Irish Sea.",
+   -5.5,
+   53.3,
+   "Irish Sea"
+  ],
+  "Cork": [
+   "On the south coast, at the head of Cork Harbour, one of the world's biggest natural harbors.",
+   -8.3,
+   51.83,
+   "Cork Harbour"
+  ],
+  "Galway": [
+   "On the west coast at the head of Galway Bay, with the Aran Islands at the bay's mouth.",
+   -9.3,
+   53.18,
+   "Galway Bay"
+  ],
+  "Limerick": [
+   "In the southwest, where the River Shannon widens into its long estuary.",
+   -9.1,
+   52.6,
+   "Shannon Estuary"
+  ],
+  "Waterford": [
+   "On the southeast coast, on the River Suir just above Waterford Harbour.",
+   -6.95,
+   52.2,
+   "Waterford Harbour"
+  ],
+  "Kilkenny": [
+   "Inland in the southeast, on the River Nore, about 30 miles north of Waterford Harbour.",
+   -6.95,
+   52.2,
+   "Waterford Harbour"
+  ],
+  "Sligo": [
+   "On the northwest coast, on Sligo Bay, beneath flat-topped Benbulben mountain.",
+   -8.47,
+   54.37,
+   "Benbulben"
+  ],
+  "Killarney": [
+   "In the far southwest, beside the Lakes of Killarney and Carrauntoohil, Ireland's highest mountain.",
+   -9.74,
+   52.0,
+   "Carrauntoohil"
+  ],
+  "Athlone": [
+   "Right in the middle of Ireland, where the River Shannon leaves Lough Ree.",
+   -8.0,
+   53.55,
+   "Lough Ree"
+  ],
+  "Donegal": [
+   "In the northwest, at the head of Donegal Bay.",
+   -8.4,
+   54.55,
+   "Donegal Bay"
+  ],
+  "Wexford": [
+   "In the southeast corner, at the mouth of the River Slaney, facing St George's Channel and Wales.",
+   -6.0,
+   52.2,
+   "St George's Channel"
+  ],
+  "Westport": [
+   "On the west coast at Clew Bay, beneath the holy mountain Croagh Patrick.",
+   -9.66,
+   53.76,
+   "Croagh Patrick"
+  ],
+  "Dingle": [
+   "Out on the Dingle Peninsula, the long finger of land reaching into the Atlantic in the southwest.",
+   -10.0,
+   52.07,
+   "Dingle Bay"
+  ]
+ },
+ "mx": {
+  "Mexico City": [
+   "In a high valley in the center of the country, about 40 miles northwest of the volcano Popocatépetl.",
+   -98.62,
+   19.02,
+   "Popocatépetl"
+  ],
+  "Puebla": [
+   "Just east of the two big volcanoes, Popocatépetl and Iztaccíhuatl.",
+   -98.62,
+   19.02,
+   "Popocatépetl"
+  ],
+  "Toluca": [
+   "In its own high valley, just northeast of the Nevado de Toluca volcano.",
+   -99.76,
+   19.11,
+   "Nevado de Toluca"
+  ],
+  "Cuernavaca": [
+   "About 40 miles west of Popocatépetl, where the land drops into warmer valleys: the 'city of eternal spring'.",
+   -98.62,
+   19.02,
+   "Popocatépetl"
+  ],
+  "Querétaro": [
+   "On the central plateau, just southwest of the rugged Sierra Gorda mountains.",
+   -99.5,
+   21.2,
+   "Sierra Gorda"
+  ],
+  "Pachuca": [
+   "In the hills about 30 miles north of the Teotihuacan pyramids.",
+   -98.84,
+   19.69,
+   "Teotihuacan"
+  ],
+  "Tlaxcala": [
+   "Just west of La Malinche volcano, in Mexico's smallest state.",
+   -98.03,
+   19.23,
+   "La Malinche"
+  ],
+  "Morelia": [
+   "In Michoacán, about 30 miles east of Lake Pátzcuaro.",
+   -101.65,
+   19.58,
+   "Lake Pátzcuaro"
+  ],
+  "Taxco": [
+   "Up in the silver-mining mountains of northern Guerrero, about 40 miles south of the Nevado de Toluca volcano.",
+   -99.76,
+   19.11,
+   "Nevado de Toluca"
+  ],
+  "Acapulco": [
+   "On the Pacific coast, almost straight south of the capital, around a horseshoe-shaped bay.",
+   -99.9,
+   16.6,
+   "Pacific Ocean"
+  ],
+  "Veracruz": [
+   "On the Gulf of Mexico coast, about 75 miles east of Pico de Orizaba, Mexico's highest peak.",
+   -97.27,
+   19.03,
+   "Pico de Orizaba"
+  ],
+  "Xalapa": [
+   "In the misty hills just east of the Cofre de Perote volcano, halfway down to the Gulf coast.",
+   -97.15,
+   19.49,
+   "Cofre de Perote"
+  ],
+  "Guanajuato": [
+   "Tucked in a ravine in the Bajío, the fertile highlands northwest of the capital.",
+   -101.0,
+   20.6,
+   "The Bajío"
+  ],
+  "Mérida": [
+   "In the northwest of the Yucatán Peninsula, about 20 miles inland from the Gulf of Mexico.",
+   -89.8,
+   21.65,
+   "Gulf of Mexico"
+  ],
+  "Cancún": [
+   "At the peninsula's northeast corner, where the Gulf meets the Caribbean, just across from Isla Mujeres.",
+   -86.73,
+   21.23,
+   "Isla Mujeres"
+  ],
+  "Campeche": [
+   "On the west side of the peninsula, facing the Bay of Campeche.",
+   -91.0,
+   20.0,
+   "Bay of Campeche"
+  ],
+  "Chetumal": [
+   "In the far southeast, right on the Belize border at the mouth of the Hondo River.",
+   -88.5,
+   17.6,
+   "Belize"
+  ],
+  "Valladolid": [
+   "In the middle of the peninsula's north, about 25 miles east of the ruins of Chichén Itzá.",
+   -88.57,
+   20.68,
+   "Chichén Itzá"
+  ],
+  "Playa del Carmen": [
+   "On the Caribbean coast, about 35 miles south of the peninsula's northeast corner.",
+   -86.6,
+   20.45,
+   "Caribbean Sea"
+  ],
+  "Tulum": [
+   "On the Caribbean coast, Maya ruins on a cliff at the north edge of the Sian Ka'an reserve.",
+   -87.6,
+   19.7,
+   "Sian Ka'an"
+  ],
+  "Progreso": [
+   "On the north coast of the peninsula, the port on the Gulf of Mexico.",
+   -89.8,
+   21.65,
+   "Gulf of Mexico"
+  ],
+  "Izamal": [
+   "The 'yellow city', about 35 miles northwest of Chichén Itzá.",
+   -88.57,
+   20.68,
+   "Chichén Itzá"
+  ],
+  "Ciudad del Carmen": [
+   "On a long island between the Gulf and the Laguna de Términos, at the southwest base of the peninsula.",
+   -91.6,
+   18.55,
+   "Laguna de Términos"
+  ],
+  "Cozumel": [
+   "On Mexico's biggest Caribbean island, just off the east coast of the peninsula.",
+   -86.6,
+   20.45,
+   "Caribbean Sea"
+  ],
+  "Bacalar": [
+   "In the south on the long 'lake of seven colors', about 15 miles from Belize.",
+   -88.5,
+   17.6,
+   "Belize"
+  ],
+  "Tizimín": [
+   "In the northeast, about 30 miles inland from the Ría Lagartos flamingo lagoon.",
+   -88.1,
+   21.57,
+   "Ría Lagartos"
+  ],
+  "Guadalajara": [
+   "About 25 miles north of Lake Chapala, Mexico's biggest lake.",
+   -103.0,
+   20.2,
+   "Lake Chapala"
+  ],
+  "Puerto Vallarta": [
+   "On the Pacific at the head of the Bay of Banderas, one of the biggest bays in Mexico.",
+   -105.4,
+   20.7,
+   "Bay of Banderas"
+  ],
+  "Tequila": [
+   "At the foot of the Tequila volcano, surrounded by blue agave fields.",
+   -103.85,
+   20.79,
+   "Tequila volcano"
+  ],
+  "Colima": [
+   "About 20 miles south of the Colima volcano, one of Mexico's most active.",
+   -103.62,
+   19.51,
+   "Colima volcano"
+  ],
+  "Manzanillo": [
+   "On the Pacific coast of the small state of Colima: Mexico's busiest port.",
+   -104.6,
+   18.9,
+   "Pacific Ocean"
+  ],
+  "Tepic": [
+   "In Nayarit, beside the Sangangüey volcano, about 30 miles inland from the Pacific.",
+   -104.73,
+   21.44,
+   "Sangangüey"
+  ],
+  "Aguascalientes": [
+   "On the high central plateau, capital of one of Mexico's smallest states, which shares its name.",
+   -102.0,
+   22.3,
+   "Central plateau"
+  ],
+  "Zacatecas": [
+   "In the high, dry north-central country, east of the Sierra Madre Occidental mountains.",
+   -104.0,
+   23.0,
+   "Sierra Madre Occidental"
+  ],
+  "León": [
+   "In the Bajío highlands, about 100 miles northeast of Lake Chapala.",
+   -103.0,
+   20.2,
+   "Lake Chapala"
+  ],
+  "Lagos de Moreno": [
+   "In the Los Altos highlands of Jalisco, on the old silver road north.",
+   -102.3,
+   21.0,
+   "Los Altos"
+  ],
+  "Ciudad Guzmán": [
+   "On the shore of Lake Zapotlán, just northeast of the Colima volcano.",
+   -103.48,
+   19.75,
+   "Lake Zapotlán"
+  ],
+  "Ajijic": [
+   "On the north shore of Lake Chapala.",
+   -103.0,
+   20.2,
+   "Lake Chapala"
+  ],
+  "Havana": [
+   "On the north coast of western Cuba, only about 100 miles south of the Florida Keys.",
+   -81.5,
+   24.6,
+   "Florida Keys"
+  ],
+  "Santiago de Cuba": [
+   "On the southeast coast, below the Sierra Maestra and Pico Turquino, Cuba's highest peak.",
+   -76.84,
+   20.01,
+   "Pico Turquino"
+  ],
+  "Camagüey": [
+   "Inland in the middle of the long eastern half, about 50 miles south of Cayo Romano, one of Cuba's biggest offshore cays.",
+   -77.8,
+   22.1,
+   "Cayo Romano"
+  ],
+  "Holguín": [
+   "In the northeast, about 30 miles inland from Bariay Bay, where Columbus first landed in Cuba.",
+   -75.8,
+   21.07,
+   "Bariay Bay"
+  ],
+  "Santa Clara": [
+   "In the center of the island, just north of the Escambray Mountains.",
+   -80.1,
+   21.95,
+   "Escambray Mountains"
+  ],
+  "Cienfuegos": [
+   "On a big bay on the south coast, about 45 miles east of the Bay of Pigs.",
+   -81.15,
+   22.1,
+   "Bay of Pigs"
+  ],
+  "Trinidad": [
+   "On the south coast, at the foot of the Escambray Mountains.",
+   -80.1,
+   21.95,
+   "Escambray Mountains"
+  ],
+  "Matanzas": [
+   "On a deep bay on the north coast, facing the Straits of Florida.",
+   -81.5,
+   23.6,
+   "Straits of Florida"
+  ],
+  "Varadero": [
+   "On the long, thin Hicacos Peninsula on the north coast, facing the Straits of Florida.",
+   -81.5,
+   23.6,
+   "Straits of Florida"
+  ],
+  "Pinar del Río": [
+   "In the far west, just south of the limestone hills of the Viñales valley.",
+   -83.71,
+   22.62,
+   "Viñales"
+  ],
+  "Guantánamo": [
+   "Near the island's southeast tip, just inland from Guantánamo Bay.",
+   -75.15,
+   19.95,
+   "Guantánamo Bay"
+  ],
+  "Baracoa": [
+   "On the north coast of the far eastern tip, near the Windward Passage to Haiti.",
+   -74.3,
+   20.0,
+   "Windward Passage"
+  ],
+  "Bayamo": [
+   "In the east, on the plains north of the Sierra Maestra and Pico Turquino.",
+   -76.84,
+   20.01,
+   "Pico Turquino"
+  ],
+  "Kingston": [
+   "On the southeast coast, at a big natural harbor below the Blue Mountains.",
+   -76.58,
+   18.05,
+   "Blue Mountains"
+  ],
+  "Montego Bay": [
+   "On the northwest coast, facing the open Caribbean toward Cuba.",
+   -77.9,
+   18.75,
+   "Caribbean Sea"
+  ],
+  "Ocho Rios": [
+   "In the middle of the north coast, by Dunn's River Falls.",
+   -77.14,
+   18.41,
+   "Dunn's River Falls"
+  ],
+  "Negril": [
+   "At the island's far western tip, along Seven Mile Beach.",
+   -78.36,
+   18.33,
+   "Seven Mile Beach"
+  ],
+  "Port Antonio": [
+   "On the northeast coast, on the far side of the Blue Mountains.",
+   -76.58,
+   18.05,
+   "Blue Mountains"
+  ],
+  "Spanish Town": [
+   "On the southern plains on the Rio Cobre, inland from Portland Bight: the old Spanish capital.",
+   -77.05,
+   17.85,
+   "Portland Bight"
+  ],
+  "Mandeville": [
+   "High in the hilly center-west, just east of the Santa Cruz Mountains.",
+   -77.75,
+   18.05,
+   "Santa Cruz Mountains"
+  ],
+  "May Pen": [
+   "On the southern plains on the Rio Minho, just inland from Portland Bight.",
+   -77.05,
+   17.85,
+   "Portland Bight"
+  ],
+  "Falmouth": [
+   "On the north coast, beside the glowing Luminous Lagoon.",
+   -77.63,
+   18.5,
+   "Luminous Lagoon"
+  ],
+  "Port Royal": [
+   "At the end of the long Palisadoes sandspit on the southeast coast, the old pirate capital.",
+   -76.75,
+   17.94,
+   "Palisadoes"
+  ],
+  "Black River": [
+   "On the southwest coast at the mouth of the Black River, next to the Great Morass wetland.",
+   -77.8,
+   18.1,
+   "Great Morass"
+  ],
+  "Morant Bay": [
+   "Near the southeast tip, south of the Blue Mountains.",
+   -76.58,
+   18.05,
+   "Blue Mountains"
+  ],
+  "San Juan": [
+   "On the north coast near the east end, facing the Atlantic Ocean.",
+   -66.1,
+   18.6,
+   "Atlantic Ocean"
+  ],
+  "Ponce": [
+   "In the middle of the south coast, facing the Caribbean.",
+   -66.6,
+   17.85,
+   "Caribbean Sea"
+  ],
+  "Mayagüez": [
+   "On the west coast, facing the Mona Passage toward the Dominican Republic.",
+   -67.6,
+   18.2,
+   "Mona Passage"
+  ],
+  "Arecibo": [
+   "On the north coast west of the middle; the famous Arecibo radio telescope was just inland.",
+   -66.75,
+   18.34,
+   "Arecibo telescope"
+  ],
+  "Caguas": [
+   "In a valley in the east-central interior, about 20 miles southwest of the El Yunque rainforest.",
+   -65.78,
+   18.3,
+   "El Yunque"
+  ],
+  "Bayamón": [
+   "On the north coast plain, just inland from the Atlantic, east of the island's middle.",
+   -66.1,
+   18.6,
+   "Atlantic Ocean"
+  ],
+  "Fajardo": [
+   "At the island's northeast corner, the ferry port for the island of Culebra.",
+   -65.3,
+   18.32,
+   "Culebra"
+  ],
+  "Aguadilla": [
+   "At the island's northwest corner, where the Atlantic meets the Mona Passage.",
+   -67.6,
+   18.2,
+   "Mona Passage"
+  ],
+  "Humacao": [
+   "On the east coast, south of the El Yunque rainforest.",
+   -65.78,
+   18.3,
+   "El Yunque"
+  ],
+  "Guayama": [
+   "On the southeast coast, below the Sierra de Cayey mountains.",
+   -66.1,
+   18.08,
+   "Sierra de Cayey"
+  ],
+  "Isabela": [
+   "On the northwest coast's surf beaches, facing the Atlantic.",
+   -66.95,
+   18.65,
+   "Atlantic Ocean"
+  ],
+  "Cabo Rojo": [
+   "In the far southwest corner, by the lighthouse on the red cliffs at the Mona Passage.",
+   -67.6,
+   18.2,
+   "Mona Passage"
+  ],
+  "Vieques": [
+   "An island off Puerto Rico's east coast, just south of Culebra.",
+   -65.3,
+   18.32,
+   "Culebra"
+  ]
+ }
+}
