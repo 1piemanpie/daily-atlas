@@ -11,5 +11,8 @@ export const uk = geoConicConformal().parallels([50, 60]).rotate([-3.5, 0]).fitW
 const mxBox = { type: 'MultiPoint', coordinates: [[-117.5, 6.8], [-117.5, 33], [-59, 33], [-59, 6.8], [-88, 33.6], [-88, 6.2]] };
 export const mx = geoConicConformal().parallels([12, 28]).rotate([88, 0]).fitWidth(800, mxBox);
 
+const inBox = { type: 'MultiPoint', coordinates: [[61, 5.5], [61, 37.5], [97.5, 37.5], [97.5, 5.5], [79, 38.2], [79, 5]] };
+export const india = geoConicConformal().parallels([12, 30]).rotate([-79, 0]).fitWidth(800, inBox);
+
 export const params = p => ({ scale: p.scale(), translate: p.translate(), rotate: p.rotate(), parallels: p.parallels ? p.parallels() : null });
 export { geoPath };

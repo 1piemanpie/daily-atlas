@@ -6815,7 +6815,38 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-11-16",
+     "place": "Delhi",
+     "day": "delhi"
+    },
+    {
+     "date": "2026-11-17",
+     "place": "Maharashtra",
+     "day": "mumbai"
+    },
+    {
+     "date": "2026-11-18",
+     "place": "Rajasthan",
+     "day": "rajasthan"
+    },
+    {
+     "date": "2026-11-19",
+     "place": "Kerala",
+     "day": "kerala"
+    },
+    {
+     "date": "2026-11-20",
+     "place": "West Bengal",
+     "day": "kolkata"
+    },
+    {
+     "date": "2026-11-21",
+     "place": "Punjab",
+     "day": "punjab"
+    }
+   ]
   },
   "IOA": {
    "name": "Indian Ocean Ter.",

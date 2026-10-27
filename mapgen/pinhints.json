@@ -1013,5 +1013,223 @@
    18.32,
    "Culebra"
   ]
+ },
+ "in": {
+  "Delhi": [
+   "On the west bank of the Yamuna, where the river runs south across the flat Ganges plain, about 120 miles southwest of where the Himalayan foothills rise.",
+   77.25,
+   28.6,
+   "Yamuna River"
+  ],
+  "Agra": [
+   "On a big loop of the Yamuna about 120 miles downstream (south) from the capital, at the edge of the dry, rocky ravine country to the west.",
+   78.04,
+   27.17,
+   "Yamuna River"
+  ],
+  "Mathura": [
+   "On the Yamuna roughly halfway between the capital and the river's big loop to the south.",
+   77.69,
+   27.5,
+   "Yamuna River"
+  ],
+  "Meerut": [
+   "In the flat farmland between two great rivers: the Yamuna to the west and the Ganges about 25 miles to the east.",
+   78.0,
+   29.0,
+   "Ganges River"
+  ],
+  "Haridwar": [
+   "Right where the Ganges leaves the forested Himalayan foothills and spreads out across the plain.",
+   78.17,
+   29.96,
+   "Ganges River"
+  ],
+  "Dehradun": [
+   "In a long green valley between the low Siwalik hills and the first big Himalayan ridge, between the Ganges and the Yamuna.",
+   78.0,
+   30.4,
+   "Doon Valley"
+  ],
+  "Mumbai": [
+   "On a narrow peninsula of reclaimed islands sticking south into the Arabian Sea, with a big sheltered harbor on its east side.",
+   72.95,
+   18.95,
+   "Mumbai Harbour"
+  ],
+  "Pune": [
+   "About 75 miles inland, just east of the green crest of the Western Ghats, where the Deccan plateau begins.",
+   73.6,
+   18.6,
+   "Western Ghats"
+  ],
+  "Nashik": [
+   "On the upper Godavari River, just east of the Western Ghats where the river begins its long trip across India.",
+   73.53,
+   19.93,
+   "Godavari source"
+  ],
+  "Nagpur": [
+   "Almost exactly in the middle of India, on the dry plateau far from any coast.",
+   79.09,
+   21.15,
+   "Center of India"
+  ],
+  "Aurangabad": [
+   "On the brown Deccan plateau about 60 miles south of the dark Ajanta hills.",
+   75.7,
+   20.55,
+   "Ajanta hills"
+  ],
+  "Ratnagiri": [
+   "On the narrow green Konkan coast, squeezed between the Arabian Sea and the Western Ghats, about 135 miles south of the big harbor city.",
+   73.3,
+   17.0,
+   "Konkan coast"
+  ],
+  "Jaipur": [
+   "On the dry plain just east of the low, broken Aravalli hills, about 150 miles southwest of the capital.",
+   75.85,
+   27.05,
+   "Aravalli Range"
+  ],
+  "Udaipur": [
+   "Among a cluster of blue lakes in the green southern Aravalli hills, the wettest corner of the state.",
+   73.68,
+   24.57,
+   "Lake Pichola"
+  ],
+  "Jodhpur": [
+   "On the eastern edge of the sandy Thar Desert, where the brown sand meets the rocky plain.",
+   72.5,
+   26.5,
+   "Thar Desert"
+  ],
+  "Jaisalmer": [
+   "Deep in the sand-colored Thar Desert, near the far western edge of India.",
+   70.9,
+   27.0,
+   "Thar Desert"
+  ],
+  "Bikaner": [
+   "In the north of the Thar Desert, south of the green irrigated strip of the Indira Gandhi Canal.",
+   73.3,
+   28.5,
+   "Indira Gandhi Canal"
+  ],
+  "Ajmer": [
+   "Beside a lake in a gap in the Aravalli hills, which run in a long diagonal ridge across the state.",
+   74.62,
+   26.47,
+   "Aravalli Range"
+  ],
+  "Kochi": [
+   "Where a long chain of coastal lagoons opens to the Arabian Sea through a gap in the sand bar, halfway down Kerala's coast.",
+   76.25,
+   9.97,
+   "Kochi harbor mouth"
+  ],
+  "Thiruvananthapuram": [
+   "On the coast about 50 miles from India's southern tip, where the Western Ghats come close to the sea.",
+   77.54,
+   8.08,
+   "India's southern tip"
+  ],
+  "Kozhikode": [
+   "On a straight stretch of the northern Kerala coast, with the dark green Western Ghats about 30 miles inland.",
+   76.1,
+   11.4,
+   "Western Ghats"
+  ],
+  "Alappuzha": [
+   "On the thin strip of sand between the Arabian Sea and the long, dark Vembanad Lake.",
+   76.4,
+   9.6,
+   "Vembanad Lake"
+  ],
+  "Munnar": [
+   "High in the Western Ghats, in a patch of hills about 50 miles inland, near the range's highest peak.",
+   77.06,
+   10.17,
+   "Anamudi peak"
+  ],
+  "Kollam": [
+   "On the coast beside the many-armed Ashtamudi Lake, about 40 miles north of the southernmost big city.",
+   76.6,
+   8.95,
+   "Ashtamudi Lake"
+  ],
+  "Kolkata": [
+   "On the Hooghly River, the westernmost channel of the Ganges delta, about 80 miles upriver from the Bay of Bengal.",
+   88.35,
+   22.6,
+   "Hooghly River"
+  ],
+  "Darjeeling": [
+   "On a ridge in the Himalayan foothills, about 45 miles south of snowy Kangchenjunga, the world's third-highest mountain.",
+   88.15,
+   27.7,
+   "Kangchenjunga"
+  ],
+  "Siliguri": [
+   "On the flat plain right at the foot of the Himalayas, in the narrow strip of India squeezed between Nepal and Bangladesh.",
+   88.4,
+   26.75,
+   "Himalayan foothills"
+  ],
+  "Durgapur": [
+   "On the Damodar River, which flows southeast across the plateau's edge toward the Hooghly.",
+   87.3,
+   23.5,
+   "Damodar River"
+  ],
+  "Digha": [
+   "On the straight sandy coast of the Bay of Bengal, just west of the wide mouth of the Hooghly.",
+   87.5,
+   21.6,
+   "Bay of Bengal"
+  ],
+  "Haldia": [
+   "Near the mouth of the Hooghly, where the river widens into a broad estuary.",
+   88.05,
+   21.95,
+   "Hooghly estuary"
+  ],
+  "Amritsar": [
+   "On the flat, green farmland between the Ravi and Beas rivers, about 15 miles from the Pakistan border.",
+   75.0,
+   31.4,
+   "Beas River"
+  ],
+  "Ludhiana": [
+   "Just south of the Sutlej River, in the middle of Punjab's green patchwork of wheat fields.",
+   75.85,
+   31.0,
+   "Sutlej River"
+  ],
+  "Jalandhar": [
+   "In the farmland of the Doaba, the land between the Beas and Sutlej rivers.",
+   75.4,
+   31.3,
+   "Doaba"
+  ],
+  "Patiala": [
+   "On the flat plain in the southeast of Punjab, about 40 miles southwest of the first Himalayan foothills.",
+   76.9,
+   30.75,
+   "Shivalik foothills"
+  ],
+  "Chandigarh": [
+   "Right at the foot of the low Shivalik hills, beside the lake built on the city's northeast side.",
+   76.82,
+   30.74,
+   "Sukhna Lake"
+  ],
+  "Bathinda": [
+   "In the dry southwest of Punjab, where the green fields start fading toward the Thar Desert.",
+   74.0,
+   29.8,
+   "Thar Desert edge"
+  ]
  }
 }

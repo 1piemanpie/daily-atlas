@@ -9,13 +9,13 @@ When a week is written, move it to "Done" with its places, then add a new week t
 | 2026-10-26 | easy | USA | New Orleans, Texas, Nashville & Memphis, California, New York City, Hawaiʻi |
 | 2026-11-02 | easy | UK & Ireland | London, Liverpool & Manchester, Wales, Scotland, Belfast & the Causeway Coast, Dublin |
 | 2026-11-09 | easy | Mexico & the Caribbean | Mexico City, Yucatán, Guadalajara, Havana, Kingston, San Juan |
+| 2026-11-16 | hard | India | Delhi, Mumbai (Maharashtra), Rajasthan, Kerala, Kolkata (West Bengal), Punjab |
 
 The first three weeks were all easy, so the queue starts with a hard week and alternates from there.
 
 ## Queue
 | Week of | Tier | Region | Ideas for the six places |
 |---|---|---|---|
-| 2026-11-16 | hard | India | Delhi, Mumbai (Maharashtra), Rajasthan, Kerala, Kolkata (West Bengal), Punjab |
 | 2026-11-23 | easy | Canada | Quebec, Ontario (Toronto & Niagara), British Columbia, Nova Scotia, Alberta, Newfoundland & Labrador |
 | 2026-11-30 | hard | China | Beijing, Shanghai, Sichuan, Hong Kong (Guangdong), Xinjiang, Yunnan |
 | 2026-12-07 | easy | Italy | Rome (Lazio), Tuscany, Venice (Veneto), Sicily, Naples (Campania), Milan (Lombardy) |
@@ -30,3 +30,4 @@ The first three weeks were all easy, so the queue starts with a hard week and al
 | 2027-02-08 | hard | Nigeria & West Africa | Lagos, Ghana (Accra), Senegal (Dakar), Abuja, Côte d'Ivoire, Mali (Timbuktu) |
 | 2027-02-15 | easy | France | Paris (Île-de-France), Provence, Brittany, Normandy, Burgundy, the Alps |
 | 2027-02-22 | hard | Southeast Asia | Bangkok, Hanoi, Singapore, Bali, Manila, Angkor (Cambodia) |
+| 2027-03-01 | easy | Andes (Peru, Chile, Argentina) | Cusco & Machu Picchu, Lima, Santiago, Patagonia, Buenos Aires, Mendoza |
