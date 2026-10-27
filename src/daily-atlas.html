@@ -2199,62 +2199,73 @@ function pickPins(d) {
   if (!d.recap) return shuffle(d.pins ? C[d.st].filter(c => d.pins.includes(c[0])) : C[d.st]).slice(0, 3).map(c => ({ st: d.st, c }));
   return shuffle(Object.keys(C)).slice(0, 3).map(st => ({ st, c: shuffle(C[st])[0] }));
 }
+// the warm-up screen and its world map are built once; each city then reuses the same map, so it only loads once
 function pinRound() {
-  const M = MAPS[WEEK.map], t = G.pins[G.pi], city = t.c[0], [lat, lon, where] = PIN_LL[WEEK.map][city], hint = (PIN_HINTS[WEEK.map] || {})[city];
-  const total = G.pinLog.reduce((a, b) => a + b.pts, 0);
   app.innerHTML = `<section class="screen">
     <div class="gamebar"><button class="ghost" id="quit" aria-label="Back to home">✕</button>
-      <div class="dots">${G.pins.map((_, i) => `<span class="pd ${G.pinLog[i] ? "pin-done" : ""} ${i === G.pi ? "cur" : ""}"></span>`).join("")}</div>
-      <span class="pinscore" id="pinscore">${total}</span></div>
+      <div class="dots" id="pindots"></div>
+      <span class="pinscore" id="pinscore">0</span></div>
     <div class="card qcard">
       <div class="qhead"><span class="chip" style="--c:var(--coral)">📍 Warm-up · Pin it</span></div>
-      <div class="qtext">Tap as close as you can to <mark>${esc(city)}, ${esc(where)}</mark></div>
+      <div class="qtext" id="pinq"></div>
       <div class="mapbox wbox" id="pinworld" aria-label="Satellite map of the world"><div class="wload" id="wload"><span class="wglobe" aria-hidden="true"></span><b>Loading the satellite map…</b></div></div>
       <div class="pinbar"><span class="credit" id="satcredit"></span></div>
       <p class="maphint small muted" id="pinhint">Drag to move, pinch or use + to zoom. Closer taps score more, up to 100 points.</p>
     </div>
     <div id="fb"></div>
   </section>`;
-  $("#quit").onclick = home;
-  const map = satMap($("#pinworld"));
+  const map = satMap($("#pinworld")), marks = L.layerGroup().addTo(map);
+  $("#quit").onclick = () => { map.remove(); home(); };
+  map.on("click", e => { if (ready() && map.shown && !G.pinLog[G.pi]) pinTap(map, marks, e.latlng.wrap()); }); // no pins through the loading card
+  pinCity(map, marks);
+}
+// show the next city: clear the last answer and swing back to the same whole-world view
+function pinCity(map, marks) {
+  const t = G.pins[G.pi], [, , where] = PIN_LL[WEEK.map][t.c[0]];
+  $("#pindots").innerHTML = G.pins.map((_, i) => `<span class="pd ${G.pinLog[i] ? "pin-done" : ""} ${i === G.pi ? "cur" : ""}"></span>`).join("");
+  $("#pinq").innerHTML = `Tap as close as you can to <mark>${esc(t.c[0])}, ${esc(where)}</mark>`;
+  $("#fb").innerHTML = "";
+  marks.clearLayers();
+  if (G.pi) map.startView(true);
   arm(400);
-  map.on("click", e => {
-    if (!ready() || G.pinLog[G.pi]) return;
-    const g = e.latlng.wrap(), mi = Math.round(greatCircleMiles(g.lat, g.lng, lat, lon)), pts = pinPoints(mi, t.st, M);
-    G.pinLog[G.pi] = { city, mi, pts };
-    const dot = cls => L.divIcon({ className: cls, html: "<i></i>", iconSize: [20, 20] });
-    const label = (m, text, cls, dir) => m.bindTooltip(esc(text), { permanent: true, direction: dir, className: `wlab ${cls}`, offset: !cls ? [0, -36] : dir === "bottom" ? [0, 12] : dir === "top" ? [0, -12] : [dir === "left" ? -12 : 12, 0] }).openTooltip();
-    const fit = [g, [lat, lon]];
-    L.polyline(fit, { color: "#fff", weight: 3, dashArray: "6 8", interactive: false }).addTo(map);
-    L.marker(g, { icon: dot("wguess"), interactive: false, keyboard: false }).addTo(map);
-    label(L.marker([lat, lon], { icon: L.divIcon({ className: "wpin", html: "<b><i></i></b>", iconSize: [26, 34], iconAnchor: [13, 34] }), interactive: false, keyboard: false, zIndexOffset: 1000 }).addTo(map), city, "", "top");
-    if (hint) {
-      const [ly, lx, name] = hint.lm;
-      L.polyline([[ly, lx], [lat, lon]], { color: "#ffbe2e", weight: 3, dashArray: "2 7", interactive: false }).addTo(map);
-      const lm = L.marker([ly, lx], { icon: dot("wlm"), interactive: false, keyboard: false }).addTo(map);
-      // label it once the view settles: away from the city, but flipped if that side would run off the map
-      map.once("moveend", () => {
-        const x = map.latLngToContainerPoint([ly, lx]).x, w = map.getSize().x;
-        let dir = Math.abs(lx - lon) < 0.6 && Math.abs(ly - lat) > 0.4 ? (ly < lat ? "bottom" : "top") : lx < lon ? "left" : "right";
-        if (dir === "left" && x < 170) dir = "right"; else if (dir === "right" && x > w - 170) dir = "left";
-        label(lm, name, "lm", dir);
-      });
-      fit.push([ly, lx]);
-    }
-    // swing the view round to the answer: the tap, the city and its landmark all in frame
-    map.flyToBounds(L.latLngBounds(fit), { padding: [120, 70], maxZoom: map.blurry ? 6.5 : hint ? 9 : 8, duration: 1.1 });
-    if (pts >= 80) { confetti($("#pinscore"), 40); buzz(18); }
-    $("#pinscore").textContent = total + pts; $("#pinscore").classList.add("bump");
-    const last = G.pi === G.pins.length - 1, word = pts >= 90 ? "Bullseye!" : pts >= 70 ? "So close!" : pts >= 40 ? "Not bad!" : pts > 0 ? "In the neighborhood" : "Way off, but now you know";
-    $("#fb").innerHTML = `<div class="feedback ${pts >= 40 ? "good" : "bad"}">
-      <div class="pinresult"><b>+${pts}</b><div><h3>${word}</h3><p>${distText(mi)} from ${esc(city)}</p></div></div>
-      ${hint ? `<div class="lmhint"><span class="lmi">🧭</span><div><b>Remember it by</b>${esc(hint.h)}</div></div>` : ""}
-      <button class="btn" style="--c:var(--grape)" id="next">${last ? "Start today's questions" : "Next city"}</button></div>`;
-    const nx = $("#next"); arm(600);
-    nx.onclick = () => { if (!ready()) return; map.remove(); if (last) question(); else { G.pi++; pinRound(); } };
-    setTimeout(() => nx.scrollIntoView({ behavior: "smooth", block: "end" }), 250);
-  });
   window.scrollTo(0, 0);
+}
+function pinTap(map, marks, g) {
+  const M = MAPS[WEEK.map], t = G.pins[G.pi], city = t.c[0], [lat, lon] = PIN_LL[WEEK.map][city], hint = (PIN_HINTS[WEEK.map] || {})[city];
+  const total = G.pinLog.reduce((a, b) => a + b.pts, 0), mi = Math.round(greatCircleMiles(g.lat, g.lng, lat, lon)), pts = pinPoints(mi, t.st, M);
+  G.pinLog[G.pi] = { city, mi, pts };
+  const dot = cls => L.divIcon({ className: cls, html: "<i></i>", iconSize: [20, 20] });
+  const label = (m, text, cls, dir) => m.bindTooltip(esc(text), { permanent: true, direction: dir, className: `wlab ${cls}`, offset: !cls ? [0, -36] : dir === "bottom" ? [0, 12] : dir === "top" ? [0, -12] : [dir === "left" ? -12 : 12, 0] }).openTooltip();
+  const fit = [g, [lat, lon]];
+  L.polyline(fit, { color: "#fff", weight: 3, dashArray: "6 8", interactive: false }).addTo(marks);
+  L.marker(g, { icon: dot("wguess"), interactive: false, keyboard: false }).addTo(marks);
+  label(L.marker([lat, lon], { icon: L.divIcon({ className: "wpin", html: "<b><i></i></b>", iconSize: [26, 34], iconAnchor: [13, 34] }), interactive: false, keyboard: false, zIndexOffset: 1000 }).addTo(marks), city, "", "top");
+  if (hint) {
+    const [ly, lx, name] = hint.lm;
+    L.polyline([[ly, lx], [lat, lon]], { color: "#ffbe2e", weight: 3, dashArray: "2 7", interactive: false }).addTo(marks);
+    const lm = L.marker([ly, lx], { icon: dot("wlm"), interactive: false, keyboard: false }).addTo(marks);
+    // label it once the view settles: away from the city, but flipped if that side would run off the map
+    map.once("moveend", () => {
+      const x = map.latLngToContainerPoint([ly, lx]).x, w = map.getSize().x;
+      let dir = Math.abs(lx - lon) < 0.6 && Math.abs(ly - lat) > 0.4 ? (ly < lat ? "bottom" : "top") : lx < lon ? "left" : "right";
+      if (dir === "left" && x < 170) dir = "right"; else if (dir === "right" && x > w - 170) dir = "left";
+      if (marks.hasLayer(lm)) label(lm, name, "lm", dir);
+    });
+    fit.push([ly, lx]);
+  }
+  // swing the view round to the answer: the tap, the city and its landmark all in frame
+  map.flyToBounds(L.latLngBounds(fit), { padding: [120, 70], maxZoom: map.blurry ? 6.5 : hint ? 9 : 8, duration: 1.1 });
+  if (pts >= 80) { confetti($("#pinscore"), 40); buzz(18); }
+  const sc = $("#pinscore"); sc.textContent = total + pts; sc.classList.remove("bump"); void sc.offsetWidth; sc.classList.add("bump");
+  $("#pindots").children[G.pi].classList.add("pin-done");
+  const last = G.pi === G.pins.length - 1, word = pts >= 90 ? "Bullseye!" : pts >= 70 ? "So close!" : pts >= 40 ? "Not bad!" : pts > 0 ? "In the neighborhood" : "Way off, but now you know";
+  $("#fb").innerHTML = `<div class="feedback ${pts >= 40 ? "good" : "bad"}">
+    <div class="pinresult"><b>+${pts}</b><div><h3>${word}</h3><p>${distText(mi)} from ${esc(city)}</p></div></div>
+    ${hint ? `<div class="lmhint"><span class="lmi">🧭</span><div><b>Remember it by</b>${esc(hint.h)}</div></div>` : ""}
+    <button class="btn" style="--c:var(--grape)" id="next">${last ? "Start today's questions" : "Next city"}</button></div>`;
+  const nx = $("#next"); arm(600);
+  nx.onclick = () => { if (!ready()) return; if (last) { map.remove(); question(); } else { G.pi++; pinCity(map, marks); } };
+  setTimeout(() => nx.scrollIntoView({ behavior: "smooth", block: "end" }), 250);
 }
 const greatCircleMiles = (la1, lo1, la2, lo2) => {
   const r = Math.PI / 180, a = Math.sin((la2 - la1) * r / 2) ** 2 + Math.cos(la1 * r) * Math.cos(la2 * r) * Math.sin((lo2 - lo1) * r / 2) ** 2;
@@ -2269,7 +2280,7 @@ function satMap(el) {
   const map = L.map(el, { zoomSnap: 0.25, zoomDelta: 1, wheelPxPerZoomLevel: 90, doubleClickZoom: false, attributionControl: false, worldCopyJump: false, maxBounds: world, maxBoundsViscosity: 1, maxZoom: 15 });
   const credit = $("#satcredit");
   let shown = false;
-  const showMap = () => { if (shown) return; shown = true; const w = $("#wload"); if (w) { w.classList.add("gone"); setTimeout(() => w.remove(), 400); } };
+  const showMap = () => { if (shown) return; shown = map.shown = true; arm(300); const w = $("#wload"); if (w) { w.classList.add("gone"); setTimeout(() => w.remove(), 400); } };
   const outline = () => {
     map.createPane("land").style.zIndex = 150;
     L.polygon(WORLD_LAND, { pane: "land", renderer: L.canvas({ pane: "land" }), color: "#9fb3d1", weight: 0.8, fillColor: "#2c4a6e", fillOpacity: 1, interactive: false }).addTo(map);
@@ -2294,8 +2305,10 @@ function satMap(el) {
   // open on the same world view every time (never on the answer): the inhabited latitudes fill the height, and on a narrow
   // phone the far east and west are cropped until you drag. Zooming out stops once the whole world fits.
   const whole = map.getBoundsZoom(L.latLngBounds([-58, -170], [78, 180])), tall = map.getBoundsZoom(L.latLngBounds([-58, -1], [78, 1]));
-  map.setView([16, 0], Math.min(tall, whole + 0.75), { animate: false });
-  map.setMinZoom(Math.min(whole, map.getZoom()));
+  const startZoom = Math.min(tall, whole + 0.75);
+  map.startView = animate => animate ? map.flyTo([16, 0], startZoom, { duration: 0.8 }) : map.setView([16, 0], startZoom, { animate: false });
+  map.startView(false);
+  map.setMinZoom(Math.min(whole, startZoom));
   return map;
 }
 // on the website, a small service worker (sw.js) keeps every satellite tile you've seen, so the warm-up map opens instantly
