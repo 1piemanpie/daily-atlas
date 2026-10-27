@@ -25,6 +25,6 @@ Branch: `claude/project-thread-ktulnq`. Every change also gets republished to th
 - [x] More detailed country borders
 
 ## Ship
-- [ ] Build `index.html`, playtest in a browser (phone and desktop widths)
-- [ ] Republish the Claude artifact
+- [x] Build `index.html`, playtest in a browser (phone and desktop widths)
+- [x] Republish the Claude artifact
 - [ ] Open the PR and update project memory
