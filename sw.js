@@ -22,7 +22,7 @@ async function cached(request) {
       await cache.put(request.url, res.clone());
       if (++puts % 50 === 0) trim(cache);
     }
-    return res;
+    return res; // a failed tile goes back to the page as a failure, so the page can try the next source
   } catch (e) {
     noCors.add(host);
     return fetch(request);
@@ -41,7 +41,7 @@ self.addEventListener("fetch", e => {
 // the page sends the first tile source's URL template: fetch the tiles for the opening world view ahead of time
 self.addEventListener("message", e => {
   const tpl = e.data && e.data.warm;
-  if (typeof tpl !== "string" || !/^https:\/\/tiles\.maps\.eox\.at\//.test(tpl)) return;
+  if (typeof tpl !== "string" || !/^https:\/\/(tiles\.maps\.eox\.at|server\.arcgisonline\.com)\//.test(tpl)) return;
   const urls = [];
   for (let z = 0; z <= 2; z++) for (let x = 0; x < 2 ** z; x++) for (let y = 0; y < 2 ** z; y++)
     urls.push(tpl.replace("{z}", z).replace("{x}", x).replace("{y}", y));
