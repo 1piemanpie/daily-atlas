@@ -38,12 +38,10 @@ self.addEventListener("fetch", e => {
   if (e.request.method === "GET" && isSat(new URL(e.request.url))) e.respondWith(cached(e.request));
 });
 
-// the page sends the first tile source's URL template: fetch the tiles for the opening world view ahead of time
+// the page sends a list of tiles to fetch ahead of time (the whole world at the zoomed-out levels); ones already kept are skipped
 self.addEventListener("message", e => {
-  const tpl = e.data && e.data.warm;
-  if (typeof tpl !== "string" || !/^https:\/\/(tiles\.maps\.eox\.at|server\.arcgisonline\.com)\//.test(tpl)) return;
-  const urls = [];
-  for (let z = 0; z <= 2; z++) for (let x = 0; x < 2 ** z; x++) for (let y = 0; y < 2 ** z; y++)
-    urls.push(tpl.replace("{z}", z).replace("{x}", x).replace("{y}", y));
-  e.waitUntil(Promise.all(urls.map(u => cached(new Request(u)).catch(() => {}))));
+  const urls = e.data && e.data.warm;
+  if (!Array.isArray(urls)) return;
+  const ok = urls.filter(u => typeof u === "string" && /^https:\/\/(tiles\.maps\.eox\.at|server\.arcgisonline\.com)\//.test(u)).slice(0, 2000);
+  e.waitUntil((async () => { for (let i = 0; i < ok.length; i += 8) await Promise.all(ok.slice(i, i + 8).map(u => cached(new Request(u)).catch(() => {}))); })());
 });
