@@ -1052,7 +1052,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 /* the world satellite warm-up (Leaflet) */
 .wbox { height: min(64vh, 520px, 115vw); min-height: 300px; background: #0b1f3a; cursor: crosshair; }
-.wbox.leaflet-container { font: inherit; background: #0b1f3a; }
+.wbox.leaflet-container { font: inherit; background: #0b1f3a; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.whold { position: absolute; z-index: 1000; width: 60px; height: 60px; margin: -30px 0 0 -30px; pointer-events: none; opacity: 0; transform: scale(.6); transition: opacity .12s, transform .12s; }
+.whold.on { opacity: 1; transform: scale(1); }
+.whold svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.whold circle { fill: rgba(255, 255, 255, .12); stroke: rgba(255, 255, 255, .35); stroke-width: 5; }
+.whold .fill { fill: none; stroke: var(--sun, #ffc93c); stroke-linecap: round; stroke-dasharray: 151; stroke-dashoffset: 151; }
+.whold.on .fill { animation: holdFill .5s linear forwards; }
+@keyframes holdFill { to { stroke-dashoffset: 0; } }
 .wload { position: absolute; inset: 0; z-index: 1001; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0b1f3a; color: #fff; font-family: var(--font-display); font-size: 17px; transition: opacity .35s; }
 .wload.gone { opacity: 0; pointer-events: none; }
 .wglobe { width: 54px; height: 54px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #5fd0ff, #1667c7 60%, #0b3a7a); box-shadow: inset -8px -6px 0 rgba(0, 0, 0, .25); position: relative; overflow: hidden; animation: bob 1.6s ease-in-out infinite; }
@@ -2411,20 +2418,47 @@ function pinRound() {
       <div class="qtext" id="pinq"></div>
       <div class="mapbox wbox" id="pinworld" aria-label="Satellite map of the world"><div class="wload" id="wload"><span class="wglobe" aria-hidden="true"></span><b>Loading the satellite map…</b></div></div>
       <div class="pinbar"><span class="credit" id="satcredit"></span></div>
-      <p class="maphint small muted" id="pinhint">Drag to move, pinch or use + to zoom. Closer taps score more, up to 100 points.</p>
+      <p class="maphint small muted" id="pinhint">Press and hold to drop your pin. Drag to move, pinch or use + to zoom. Closer pins score more, up to 100 points.</p>
     </div>
     <div id="fb"></div>
   </section>`;
   const map = satMap($("#pinworld")), marks = L.layerGroup().addTo(map);
   $("#quit").onclick = () => { map.remove(); home(); };
-  map.on("click", e => { if (ready() && map.shown && !G.pinLog[G.pi]) pinTap(map, marks, e.latlng.wrap()); }); // no pins through the loading card
+  holdToPin(map, $("#pinworld"), g => { if (ready() && map.shown && !G.pinLog[G.pi]) pinTap(map, marks, g); }); // no pins through the loading card
   pinCity(map, marks);
+}
+// a pin only drops after pressing and holding still for HOLD_MS, while a ring fills round the finger; a quick tap, a drag or a
+// pinch drops nothing, so moving around the map can never place a pin by accident
+const HOLD_MS = 500;
+function holdToPin(map, el, drop) {
+  const ring = document.createElement("div");
+  ring.className = "whold"; ring.setAttribute("aria-hidden", "true");
+  ring.innerHTML = `<svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24"/></svg>`;
+  el.appendChild(ring);
+  const down = new Map();
+  let timer = 0, start = null;
+  const cancel = () => { clearTimeout(timer); timer = 0; start = null; ring.classList.remove("on"); };
+  const pointAt = e => { const r = el.getBoundingClientRect(); return L.point(e.clientX - r.left, e.clientY - r.top); };
+  el.addEventListener("pointerdown", e => {
+    down.set(e.pointerId, true);
+    if (down.size > 1 || (e.pointerType === "mouse" && e.button !== 0) || !map.shown || G.pinLog[G.pi] || e.target.closest(".leaflet-control")) return cancel();
+    start = pointAt(e);
+    ring.style.left = start.x + "px"; ring.style.top = start.y + "px";
+    ring.classList.remove("on"); void ring.offsetWidth; ring.classList.add("on");
+    const at = map.containerPointToLatLng(start).wrap(); // where the finger went down, even if the map shifts a hair
+    timer = setTimeout(() => { cancel(); drop(at); }, HOLD_MS);
+  }, true);
+  el.addEventListener("pointermove", e => { if (start && pointAt(e).distanceTo(start) > 12) cancel(); }, true);
+  const up = e => { down.delete(e.pointerId); cancel(); };
+  ["pointerup", "pointercancel"].forEach(t => el.addEventListener(t, up, true));
+  el.addEventListener("contextmenu", e => e.preventDefault());
+  map.on("zoomstart", () => { if (start) cancel(); });
 }
 // show the next city: clear the last answer and swing back to the same whole-world view
 function pinCity(map, marks) {
   const t = G.pins[G.pi], [, , where] = PIN_LL[WEEK.map][t.c[0]];
   $("#pindots").innerHTML = G.pins.map((_, i) => `<span class="pd ${G.pinLog[i] ? "pin-done" : ""} ${i === G.pi ? "cur" : ""}"></span>`).join("");
-  $("#pinq").innerHTML = `Tap as close as you can to <mark>${esc(t.c[0])}, ${esc(where)}</mark>`;
+  $("#pinq").innerHTML = `Pin as close as you can to <mark>${esc(t.c[0])}, ${esc(where)}</mark>`;
   $("#fb").innerHTML = "";
   marks.clearLayers();
   if (G.pi) map.startView(true);
