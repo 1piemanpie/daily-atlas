@@ -1066,7 +1066,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .whold svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .whold circle { fill: rgba(255, 255, 255, .12); stroke: rgba(255, 255, 255, .35); stroke-width: 5; }
 .whold .fill { fill: none; stroke: var(--sun, #ffc93c); stroke-linecap: round; stroke-dasharray: 151; stroke-dashoffset: 151; }
-.whold.on .fill { animation: holdFill .5s linear forwards; }
+.whold.on .fill { animation: holdFill .4s linear forwards; }
 @keyframes holdFill { to { stroke-dashoffset: 0; } }
 .wload { position: absolute; inset: 0; z-index: 1001; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0b1f3a; color: #fff; font-family: var(--font-display); font-size: 17px; transition: opacity .35s; }
 .wload.gone { opacity: 0; pointer-events: none; }
@@ -2437,9 +2437,10 @@ function pinRound() {
   holdToPin(map, $("#pinworld"), g => { if (ready() && map.shown && !G.pinLog[G.pi]) pinTap(map, marks, g); }); // no pins through the loading card
   pinCity(map, marks);
 }
-// a pin only drops after pressing and holding still for HOLD_MS, while a ring fills round the finger; a quick tap, a drag or a
-// pinch drops nothing, so moving around the map can never place a pin by accident
-const HOLD_MS = 500;
+// a pin only drops after pressing and holding still; a quick tap, a drag or a pinch drops nothing, so moving around the map can
+// never place a pin by accident. The ring only shows up once the finger has stayed put for HOLD_QUIET (so panning never flashes
+// it), then fills over HOLD_FILL (matches the .whold animation) and the pin drops.
+const HOLD_QUIET = 200, HOLD_FILL = 400;
 function holdToPin(map, el, drop) {
   const ring = document.createElement("div");
   ring.className = "whold"; ring.setAttribute("aria-hidden", "true");
@@ -2453,10 +2454,13 @@ function holdToPin(map, el, drop) {
     down.set(e.pointerId, true);
     if (down.size > 1 || (e.pointerType === "mouse" && e.button !== 0) || !map.shown || G.pinLog[G.pi] || e.target.closest(".leaflet-control")) return cancel();
     start = pointAt(e);
-    ring.style.left = start.x + "px"; ring.style.top = start.y + "px";
-    ring.classList.remove("on"); void ring.offsetWidth; ring.classList.add("on");
     const at = map.containerPointToLatLng(start).wrap(); // where the finger went down, even if the map shifts a hair
-    timer = setTimeout(() => { cancel(); drop(at); }, HOLD_MS);
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      ring.style.left = start.x + "px"; ring.style.top = start.y + "px";
+      ring.classList.remove("on"); void ring.offsetWidth; ring.classList.add("on");
+      timer = setTimeout(() => { cancel(); drop(at); }, HOLD_FILL);
+    }, HOLD_QUIET);
   }, true);
   el.addEventListener("pointermove", e => { if (start && pointAt(e).distanceTo(start) > 12) cancel(); }, true);
   const up = e => { down.delete(e.pointerId); cancel(); };
