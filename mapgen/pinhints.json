@@ -1231,5 +1231,223 @@
    29.8,
    "Thar Desert edge"
   ]
+ },
+ "ca": {
+  "Montreal": [
+   "On a big island in the St. Lawrence River, just downstream from where the Ottawa River joins it, about 40 miles north of the US border.",
+   -73.6,
+   45.55,
+   "Island of Montreal"
+  ],
+  "Quebec City": [
+   "On the north shore of the St. Lawrence where the river suddenly narrows, just upstream of where it widens around the long Île d'Orléans.",
+   -71.0,
+   46.92,
+   "Île d'Orléans"
+  ],
+  "Gatineau": [
+   "On the north bank of the Ottawa River, right across the water from the city of Ottawa, about 100 miles west of Montreal.",
+   -75.71,
+   45.43,
+   "Ottawa River"
+  ],
+  "Sherbrooke": [
+   "In the rolling hills about 25 miles north of the Vermont border, where the Magog and Saint-François rivers meet, east of long Lake Memphremagog.",
+   -72.25,
+   45.15,
+   "Lake Memphremagog"
+  ],
+  "Saguenay": [
+   "On the Saguenay River's deep, dark fjord, about 30 miles east of where the river drains out of big round Lac Saint-Jean.",
+   -72.0,
+   48.6,
+   "Lac Saint-Jean"
+  ],
+  "Trois-Rivières": [
+   "On the north shore of the St. Lawrence where the Saint-Maurice River pours in, halfway between Montreal and Quebec City.",
+   -72.7,
+   46.4,
+   "Saint-Maurice River mouth"
+  ],
+  "Toronto": [
+   "On the northwest shore of Lake Ontario, near the lake's western end, across the water from the mouth of the Niagara River.",
+   -79.4,
+   43.6,
+   "Lake Ontario shore"
+  ],
+  "Ottawa": [
+   "On the south bank of the Ottawa River, about 100 miles upstream from where it joins the St. Lawrence at Montreal.",
+   -75.7,
+   45.43,
+   "Ottawa River"
+  ],
+  "Niagara Falls": [
+   "On the short Niagara River that runs north from Lake Erie into Lake Ontario, on its west (Canadian) bank, about a third of the way down.",
+   -79.07,
+   43.08,
+   "Niagara River"
+  ],
+  "Kingston": [
+   "At the eastern tip of Lake Ontario, where the lake narrows into the St. Lawrence River and the Thousand Islands begin.",
+   -76.2,
+   44.3,
+   "Thousand Islands"
+  ],
+  "Sudbury": [
+   "About 35 miles north of Georgian Bay, beside a huge oval basin (an ancient meteorite crater) dotted with lakes.",
+   -81.1,
+   46.6,
+   "Sudbury Basin"
+  ],
+  "Thunder Bay": [
+   "On the northwest shore of Lake Superior, tucked behind the long Sleeping Giant peninsula, about 40 miles north of the Minnesota border.",
+   -88.8,
+   48.4,
+   "Sleeping Giant peninsula"
+  ],
+  "Vancouver": [
+   "On the mainland just north of the wide Fraser River delta, facing Vancouver Island across the Strait of Georgia, about 25 miles north of the US border.",
+   -123.1,
+   49.1,
+   "Fraser River delta"
+  ],
+  "Victoria": [
+   "At the southern tip of Vancouver Island, looking south across the Strait of Juan de Fuca to the snowy Olympic Mountains of Washington.",
+   -123.5,
+   48.3,
+   "Strait of Juan de Fuca"
+  ],
+  "Kelowna": [
+   "Halfway along the east shore of long, thin Okanagan Lake, about 80 miles north of the US border.",
+   -119.5,
+   49.9,
+   "Okanagan Lake"
+  ],
+  "Whistler": [
+   "In a mountain valley in the Coast Mountains about 60 miles north of Vancouver, up the road along the long fjord of Howe Sound.",
+   -123.3,
+   49.55,
+   "Howe Sound"
+  ],
+  "Prince George": [
+   "Where the Nechako River joins the big Fraser River, on a plateau in the middle of the province, east of a wide spread of lakes.",
+   -122.75,
+   53.92,
+   "Fraser and Nechako rivers"
+  ],
+  "Prince Rupert": [
+   "On an island at the mouth of the Skeena River on the north Pacific coast, just south of the Alaska Panhandle, facing the Haida Gwaii islands.",
+   -130.1,
+   54.2,
+   "Skeena River mouth"
+  ],
+  "Halifax": [
+   "On the Atlantic coast of Nova Scotia, about halfway along, beside a long deep harbor that opens into the inner Bedford Basin.",
+   -63.65,
+   44.7,
+   "Bedford Basin"
+  ],
+  "Sydney": [
+   "Near the northeast end of Cape Breton Island, on a harbor east of the big inland salt lake, the Bras d'Or.",
+   -60.75,
+   45.95,
+   "Bras d'Or Lake"
+  ],
+  "Lunenburg": [
+   "On Nova Scotia's Atlantic coast about 50 miles southwest of Halifax, on a small peninsula on the west side of island-filled Mahone Bay.",
+   -64.25,
+   44.45,
+   "Mahone Bay"
+  ],
+  "Truro": [
+   "At the inland tip of Cobequid Bay, the far eastern end of the Bay of Fundy, where its giant tides reach their limit.",
+   -63.55,
+   45.35,
+   "Cobequid Bay"
+  ],
+  "Yarmouth": [
+   "Near the southwestern tip of Nova Scotia, on the Gulf of Maine, at the mouth of the Bay of Fundy.",
+   -66.2,
+   43.75,
+   "Southwest tip of Nova Scotia"
+  ],
+  "Wolfville": [
+   "On the south shore of the Minas Basin, an arm of the Bay of Fundy, beside wide tidal mud flats about 50 miles northwest of Halifax.",
+   -64.3,
+   45.15,
+   "Minas Basin"
+  ],
+  "Calgary": [
+   "Where the Bow and Elbow rivers meet, on the flat prairie about 50 miles east of where the Rocky Mountains rise.",
+   -114.05,
+   51.05,
+   "Bow and Elbow rivers"
+  ],
+  "Edmonton": [
+   "Along the winding valley of the North Saskatchewan River, in the middle of the province, about 180 miles north of Calgary.",
+   -113.5,
+   53.55,
+   "North Saskatchewan River"
+  ],
+  "Banff": [
+   "In the Bow River valley inside the Rocky Mountains, about 15 miles in from where the mountains meet the prairie, 70 miles west of Calgary.",
+   -115.57,
+   51.18,
+   "Bow Valley"
+  ],
+  "Lethbridge": [
+   "In the deep coulee of the Oldman River on the flat southern prairie, about 60 miles north of the Montana border.",
+   -112.85,
+   49.7,
+   "Oldman River"
+  ],
+  "Jasper": [
+   "In the Athabasca River valley high in the Rockies, just east of the BC border, about 200 miles northwest of Banff.",
+   -118.08,
+   52.88,
+   "Athabasca River"
+  ],
+  "Fort McMurray": [
+   "Where the Clearwater River joins the Athabasca, in the northern forest, beside the huge bare scars of the oil-sands mines to its north.",
+   -111.6,
+   57.1,
+   "Athabasca oil sands mines"
+  ],
+  "St. John's": [
+   "On the eastern edge of the Avalon Peninsula, the far southeast corner of Newfoundland, on a narrow harbor opening onto the Atlantic.",
+   -52.7,
+   47.57,
+   "St. John's Harbour"
+  ],
+  "Corner Brook": [
+   "At the inner end of the Bay of Islands on Newfoundland's west coast, where the Humber River flows into a long fjord.",
+   -58.0,
+   49.1,
+   "Bay of Islands"
+  ],
+  "Gander": [
+   "In the middle of northeastern Newfoundland, beside the long thin Gander Lake, about 30 miles inland from the coast.",
+   -54.4,
+   48.9,
+   "Gander Lake"
+  ],
+  "Grand Falls-Windsor": [
+   "On the Exploits River in central Newfoundland, about 50 miles downstream from long Red Indian Lake.",
+   -56.9,
+   48.6,
+   "Red Indian Lake"
+  ],
+  "Happy Valley-Goose Bay": [
+   "At the inner end of Lake Melville, a huge saltwater inlet that cuts about 100 miles into Labrador from the Atlantic.",
+   -60.0,
+   53.4,
+   "Lake Melville"
+  ],
+  "Labrador City": [
+   "In western Labrador right by the Quebec border, among lakes north of the giant ring-shaped Manicouagan crater.",
+   -68.7,
+   51.4,
+   "Manicouagan crater"
+  ]
  }
 }
