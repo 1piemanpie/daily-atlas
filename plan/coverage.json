@@ -2792,7 +2792,38 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-11-23",
+     "place": "Quebec",
+     "day": "quebec"
+    },
+    {
+     "date": "2026-11-24",
+     "place": "Ontario",
+     "day": "ontario"
+    },
+    {
+     "date": "2026-11-25",
+     "place": "British Columbia",
+     "day": "bc"
+    },
+    {
+     "date": "2026-11-26",
+     "place": "Nova Scotia",
+     "day": "novascotia"
+    },
+    {
+     "date": "2026-11-27",
+     "place": "Alberta",
+     "day": "alberta"
+    },
+    {
+     "date": "2026-11-28",
+     "place": "Newfoundland and Labrador",
+     "day": "newfoundland"
+    }
+   ]
   },
   "CYM": {
    "name": "Cayman Is.",

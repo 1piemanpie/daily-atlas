@@ -14,5 +14,8 @@ export const mx = geoConicConformal().parallels([12, 28]).rotate([88, 0]).fitWid
 const inBox = { type: 'MultiPoint', coordinates: [[61, 5.5], [61, 37.5], [97.5, 37.5], [97.5, 5.5], [79, 38.2], [79, 5]] };
 export const india = geoConicConformal().parallels([12, 30]).rotate([-79, 0]).fitWidth(800, inBox);
 
+const caBox = { type: 'MultiPoint', coordinates: [[-168, 54], [-168, 70], [-141, 72], [-120, 79], [-90, 83], [-62, 83], [-52, 47], [-75, 39], [-95, 40], [-124, 40]] };
+export const canada = geoConicConformal().parallels([49, 77]).rotate([96, 0]).fitWidth(800, caBox);
+
 export const params = p => ({ scale: p.scale(), translate: p.translate(), rotate: p.rotate(), parallels: p.parallels ? p.parallels() : null });
 export { geoPath };
