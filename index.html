@@ -33,6 +33,8 @@
   --bad: #ff5a6e;
   --shadow: rgba(29, 42, 77, .14);
   --land: #f1f5e6; --land2: #dfe6d3; --sea: #cfe6fb; --water: #6fb3ee; --city: #7b8496;
+  /* tappable question maps: land fill, border, water behind, hover tint, labels */
+  --mland: var(--tile); --medge: var(--card); --msea: color-mix(in srgb, var(--ocean) 8%, var(--card)); --mworld: var(--card); --mhover: color-mix(in srgb, var(--grape) 35%, var(--mland)); --mink: var(--tile-ink);
   --font-display: "Fredoka", "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
   --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
   --pop: cubic-bezier(.34, 1.56, .64, 1);
@@ -42,6 +44,7 @@
     --sky: #131b36; --sky-2: #1f1838; --card: #1e2a4f; --ink: #f3f6ff; --muted: #a9b5d9;
     --line: #2f3d68; --tile: #27345e; --tile-ink: #7e8cb8; --shadow: rgba(0, 0, 0, .35);
     --land: #3a4a6e; --land2: #2b3858; --sea: #16213f; --water: #3f86d4; --city: #c9d2ea;
+    --mland: #52669e; --medge: #18213f; --msea: #10355f; --mworld: #10355f; --mhover: #8f7cf0; --mink: #e3e9ff;
     --coral: #ff7a7a; --sun: #ffc947; --mint: #2fe0aa; --grape: #9c84ff; --ocean: #4aa9ff; --pink: #ff8ccf;
     color-scheme: dark;
   }
@@ -50,6 +53,7 @@
   --sky: #131b36; --sky-2: #1f1838; --card: #1e2a4f; --ink: #f3f6ff; --muted: #a9b5d9;
   --line: #2f3d68; --tile: #27345e; --tile-ink: #7e8cb8; --shadow: rgba(0, 0, 0, .35);
   --land: #3a4a6e; --land2: #2b3858; --sea: #16213f; --water: #3f86d4; --city: #c9d2ea;
+  --mland: #52669e; --medge: #18213f; --msea: #10355f; --mworld: #10355f; --mhover: #8f7cf0; --mink: #e3e9ff;
   --coral: #ff7a7a; --sun: #ffc947; --mint: #2fe0aa; --grape: #9c84ff; --ocean: #4aa9ff; --pink: #ff8ccf;
   color-scheme: dark;
 }
@@ -204,12 +208,12 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .fdetail { font-size: 15px; color: var(--muted); overflow-wrap: anywhere; }
 .viz { background: var(--card); border-radius: 18px; padding: 12px; }
 .usmap .st.r0 { fill: var(--coral); animation: regionIn .7s .15s var(--pop) both; }
-.usmap .st.r1 { fill: color-mix(in srgb, var(--ocean) 55%, var(--tile)); }
-@keyframes regionIn { from { fill: var(--tile); } }
+.usmap .st.r1 { fill: color-mix(in srgb, var(--ocean) 55%, var(--mland)); }
+@keyframes regionIn { from { fill: var(--mland); } }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 12.5px; font-weight: 800; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .sw { width: 14px; height: 14px; border-radius: 5px; display: inline-block; }
-.sw.r0 { background: var(--coral); } .sw.r1 { background: color-mix(in srgb, var(--ocean) 55%, var(--tile)); }
+.sw.r0 { background: var(--coral); } .sw.r1 { background: color-mix(in srgb, var(--ocean) 55%, var(--mland)); }
 .usmap .xpt text { font: 700 28px var(--font-display); fill: var(--ink); }
 .vmap .arc { animation: dash 1.2s .2s ease-out both; }
 @keyframes dash { from { stroke-dashoffset: 200; opacity: 0; } to { stroke-dashoffset: 0; opacity: 1; } }
@@ -266,12 +270,12 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .mapbox .worldmap { touch-action: pan-y; }
 .mapbox.zoomed .worldmap { touch-action: none; }
 .worldmap .sea { fill: none; }
-.worldmap .wc, .worldmap .ws { fill: var(--tile); stroke: var(--card); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-linejoin: round; cursor: pointer; transition: fill .2s; }
+.worldmap .wc, .worldmap .ws { fill: var(--mland); stroke: var(--medge); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-linejoin: round; cursor: pointer; transition: fill .2s; }
 /* subdivisions sit over their country: see-through until visited, borders only when zoomed in */
 .worldmap .ws { fill: transparent; stroke-width: .8; }
 .worldmap.near .wc { stroke-width: 1.8; }
 .worldmap.near .ws { stroke-opacity: .75; }
-.worldmap .wc:hover, .worldmap .ws:hover { fill: color-mix(in srgb, var(--grape) 25%, var(--tile)); }
+.worldmap .wc:hover, .worldmap .ws:hover { fill: color-mix(in srgb, var(--grape) 25%, var(--mland)); }
 .worldmap:not(.near) .ws { stroke-opacity: 0; }
 .worldmap .v.c0, .worldmap .vdot.c0 { fill: var(--coral); } .worldmap .v.c1, .worldmap .vdot.c1 { fill: var(--ocean); }
 .worldmap .v.c2, .worldmap .vdot.c2 { fill: var(--grape); } .worldmap .v.c3, .worldmap .vdot.c3 { fill: var(--mint); }
@@ -288,7 +292,7 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .worldmap .wpin .ring { fill: none; stroke: var(--coral); stroke-width: 3; animation: ringPulse 1.8s ease-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes ringPulse { from { transform: scale(.6); opacity: 1; } to { transform: scale(2.4); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .worldmap .wpin .ring { animation: none; } }
-.mapbox.worldbox { aspect-ratio: 1000 / 624; background: var(--card); }
+.mapbox.worldbox { aspect-ratio: 1000 / 624; background: var(--mworld); }
 .weekhead { display: flex; align-items: center; gap: 4px; }
 .weekhead .eyebrow { flex: 1; text-align: center; }
 .wkarrow { font-size: 22px; line-height: 1; padding: 2px 10px; }
@@ -327,13 +331,13 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .usmap { width: 100%; height: auto; display: block; overflow: visible; }
 .usmap.zoomed { overflow: hidden; }
 .usmap.zoomed .st { vector-effect: non-scaling-stroke; }
-.usmap .st { fill: var(--tile); stroke: var(--card); stroke-width: 1.2; stroke-linejoin: round; transition: fill .2s, transform .2s var(--pop); transform-box: fill-box; transform-origin: center; }
+.usmap .st { fill: var(--mland); stroke: var(--medge); stroke-width: 1.2; stroke-linejoin: round; transition: fill .2s, transform .2s var(--pop); transform-box: fill-box; transform-origin: center; }
 .usmap.play .st, .usmap.play .co { cursor: pointer; }
-.usmap.play .st:hover { fill: color-mix(in srgb, var(--grape) 35%, var(--tile)); }
-.usmap .co rect { fill: var(--tile); stroke: var(--card); stroke-width: 1.5; transition: fill .2s; }
-.usmap .co text { font: 700 22px var(--font-display); fill: var(--tile-ink); pointer-events: none; }
-.usmap .co line { stroke: var(--tile-ink); stroke-width: 1; opacity: .6; pointer-events: none; }
-.usmap.play .co:hover rect { fill: color-mix(in srgb, var(--grape) 35%, var(--tile)); }
+.usmap.play .st:hover { fill: var(--mhover); }
+.usmap .co rect { fill: var(--mland); stroke: var(--medge); stroke-width: 1.5; transition: fill .2s; }
+.usmap .co text { font: 700 22px var(--font-display); fill: var(--mink); pointer-events: none; }
+.usmap .co line { stroke: var(--mink); stroke-width: 1; opacity: .6; pointer-events: none; }
+.usmap.play .co:hover rect { fill: var(--mhover); }
 .usmap.locked { pointer-events: none; }
 .usmap .right.st, .usmap .right rect { fill: var(--good); }
 .usmap .wrong.st, .usmap .wrong rect { fill: var(--bad); }
@@ -351,7 +355,7 @@ mark { background: color-mix(in srgb, var(--sun) 55%, transparent); color: inher
 .pin .ring { fill: var(--coral); opacity: .3; transform-box: fill-box; transform-origin: center; animation: ping 1.8s 1s ease-out infinite; }
 @keyframes ping { from { transform: scale(.6); opacity: .5; } to { transform: scale(2.4); opacity: 0; } }
 .minimap { margin: 14px -6px 0; }
-.mapbox { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; position: relative; margin: 0 -8px; border-radius: 18px; overflow: hidden; background: color-mix(in srgb, var(--ocean) 8%, var(--card)); }
+.mapbox { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; position: relative; margin: 0 -8px; border-radius: 18px; overflow: hidden; background: var(--msea); }
 .mapbox .usmap { touch-action: pan-y; }
 .mapbox.zoomed .usmap { touch-action: none; }
 .zoombtns { position: absolute; left: 8px; top: 8px; display: flex; flex-direction: column; gap: 6px; }
