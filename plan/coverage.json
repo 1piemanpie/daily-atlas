@@ -3294,7 +3294,33 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-11-30",
+     "place": "Beijing",
+     "day": "beijing"
+    },
+    {
+     "date": "2026-12-01",
+     "place": "Shanghai",
+     "day": "shanghai"
+    },
+    {
+     "date": "2026-12-02",
+     "place": "Sichuan",
+     "day": "sichuan"
+    },
+    {
+     "date": "2026-12-04",
+     "place": "Xinjiang",
+     "day": "xinjiang"
+    },
+    {
+     "date": "2026-12-05",
+     "place": "Yunnan",
+     "day": "yunnan"
+    }
+   ]
   },
   "COL": {
    "name": "Colombia",
@@ -6411,7 +6437,13 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-12-03",
+     "place": "Hong Kong",
+     "day": "hongkong"
+    }
+   ]
   },
   "HUN": {
    "name": "Hungary",

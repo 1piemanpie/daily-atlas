@@ -1449,5 +1449,223 @@
    51.4,
    "Manicouagan crater"
   ]
+ },
+ "cn": {
+  "Beijing": [
+   "At the northwest corner of the flat North China Plain, where the mountains curve round to the north and west, about 40 miles southwest of the big Miyun Reservoir.",
+   116.98,
+   40.5,
+   "Miyun Reservoir"
+  ],
+  "Tianjin": [
+   "Near the inner corner of the Bohai Sea, where the Hai River reaches the coast, about 70 miles southeast of Beijing.",
+   117.75,
+   39.0,
+   "Bohai Sea coast"
+  ],
+  "Datong": [
+   "In a dry valley beyond the mountains about 160 miles west of Beijing, just south of the Inner Mongolia border, along the Sanggan River's upper reaches.",
+   113.6,
+   40.0,
+   "Sanggan River valley"
+  ],
+  "Shijiazhuang": [
+   "On the flat North China Plain right at the foot of the Taihang Mountains, about 170 miles southwest of Beijing.",
+   114.2,
+   38.1,
+   "Taihang Mountains foothills"
+  ],
+  "Chengde": [
+   "In a mountain valley about 110 miles northeast of Beijing, north of the big Miyun Reservoir.",
+   116.98,
+   40.5,
+   "Miyun Reservoir"
+  ],
+  "Qinhuangdao": [
+   "On the Bohai Sea coast where the mountains come down to the sea, near the very east end of the Great Wall.",
+   119.8,
+   40.0,
+   "Where the mountains meet the Bohai Sea"
+  ],
+  "Shanghai": [
+   "On the south bank of the huge brown mouth of the Yangtze River, where it pours into the East China Sea.",
+   121.9,
+   31.4,
+   "Mouth of the Yangtze"
+  ],
+  "Hangzhou": [
+   "At the inland end of Hangzhou Bay, the big funnel-shaped bay south of Shanghai, about 100 miles southwest of Shanghai.",
+   121.0,
+   30.4,
+   "Hangzhou Bay"
+  ],
+  "Suzhou": [
+   "On the east shore of Lake Tai, the huge round lake about 55 miles west of Shanghai.",
+   120.2,
+   31.2,
+   "Lake Tai"
+  ],
+  "Nanjing": [
+   "On the big Yangtze River, about 170 miles upstream from Shanghai, where the river makes a bend among low hills.",
+   118.75,
+   32.1,
+   "Yangtze River"
+  ],
+  "Ningbo": [
+   "On the coast just south of Hangzhou Bay, facing the Zhoushan islands scattered offshore, about 90 miles south of Shanghai.",
+   122.2,
+   30.0,
+   "Zhoushan islands"
+  ],
+  "Wuxi": [
+   "On the north shore of Lake Tai, about 80 miles west of Shanghai.",
+   120.25,
+   31.45,
+   "Lake Tai"
+  ],
+  "Chengdu": [
+   "In the middle of the flat, green plain at the western end of the Sichuan Basin, about 40 miles east of where the mountains of the Tibetan Plateau rise like a wall.",
+   103.4,
+   30.9,
+   "Edge of the Tibetan Plateau"
+  ],
+  "Chongqing": [
+   "Where the Jialing River meets the Yangtze, among long parallel ridges at the eastern end of the Sichuan Basin.",
+   106.58,
+   29.57,
+   "Jialing and Yangtze rivers"
+  ],
+  "Leshan": [
+   "Where the Min, Dadu and Qingyi rivers meet, about 75 miles south of Chengdu at the basin's southwest edge.",
+   103.77,
+   29.55,
+   "Three-river junction"
+  ],
+  "Mianyang": [
+   "On the Fu River at the northern edge of the Sichuan Basin, about 70 miles northeast of Chengdu, where the mountains begin.",
+   104.7,
+   31.5,
+   "Fu River"
+  ],
+  "Yibin": [
+   "Where the Min River joins the Yangtze at the south edge of the Sichuan Basin, about 140 miles south of Chengdu.",
+   104.63,
+   28.77,
+   "Min and Yangtze rivers"
+  ],
+  "Kangding": [
+   "In a deep mountain valley on the edge of the Tibetan Plateau, about 140 miles west of Chengdu and north of the huge snowy peak of Minya Konka.",
+   101.88,
+   29.6,
+   "Minya Konka"
+  ],
+  "Hong Kong": [
+   "On the islands and peninsula on the east side of the wide Pearl River estuary, where it opens into the South China Sea.",
+   113.8,
+   22.4,
+   "Pearl River estuary"
+  ],
+  "Shenzhen": [
+   "Right across the river border north of Hong Kong, along the east shore of the Pearl River estuary.",
+   113.85,
+   22.55,
+   "Pearl River estuary"
+  ],
+  "Guangzhou": [
+   "At the top of the Pearl River Delta, where its river channels gather, about 75 miles northwest of Hong Kong.",
+   113.4,
+   22.9,
+   "Pearl River Delta"
+  ],
+  "Macau": [
+   "On a small peninsula on the west side of the Pearl River estuary's mouth, across the water from Hong Kong.",
+   113.75,
+   22.28,
+   "Hong Kong–Zhuhai–Macau Bridge"
+  ],
+  "Zhuhai": [
+   "On the west shore of the Pearl River estuary's mouth, right beside Macau, at the west end of the long sea bridge from Hong Kong.",
+   113.75,
+   22.28,
+   "Hong Kong–Zhuhai–Macau Bridge"
+  ],
+  "Foshan": [
+   "Just southwest of Guangzhou, in the maze of river channels at the top of the Pearl River Delta, about 85 miles from Hong Kong.",
+   113.1,
+   22.9,
+   "Pearl River Delta"
+  ],
+  "Ürümqi": [
+   "At the north foot of the snowy Tian Shan range, where the mountains meet the desert of the Dzungarian Basin, west of the peak of Bogda Feng.",
+   88.3,
+   43.8,
+   "Bogda Feng, Tian Shan"
+  ],
+  "Kashgar": [
+   "On an oasis at the far western tip of the Tarim Basin, where the Tian Shan and Pamir ranges close in.",
+   75.5,
+   39.0,
+   "Western tip of the Tarim Basin"
+  ],
+  "Turpan": [
+   "In a deep, dry basin just south of the Tian Shan, about 95 miles southeast of Ürümqi, north of the salt flats of Ayding Lake.",
+   89.27,
+   42.65,
+   "Ayding Lake"
+  ],
+  "Hotan": [
+   "On an oasis at the southern edge of the huge Taklamakan sand sea, at the foot of the Kunlun Mountains.",
+   82.0,
+   39.0,
+   "Taklamakan Desert"
+  ],
+  "Yining": [
+   "In the green Ili River valley, which opens west toward the Kazakh steppe, between two ridges of the Tian Shan.",
+   81.3,
+   43.85,
+   "Ili River valley"
+  ],
+  "Karamay": [
+   "On the northwest edge of the Dzungarian Basin's desert, about 180 miles northwest of Ürümqi.",
+   86.0,
+   45.5,
+   "Dzungarian Basin"
+  ],
+  "Kunming": [
+   "On the north shore of the long Dian Lake, on a high plateau in central Yunnan.",
+   102.68,
+   24.85,
+   "Dian Lake"
+  ],
+  "Lijiang": [
+   "On a high plain at the foot of snowy Jade Dragon Snow Mountain, just south of where the Yangtze makes a sharp U-turn.",
+   100.18,
+   27.1,
+   "Jade Dragon Snow Mountain"
+  ],
+  "Dali": [
+   "Between the long Erhai Lake and the Cangshan mountains, about 170 miles west of Kunming.",
+   100.2,
+   25.8,
+   "Erhai Lake"
+  ],
+  "Jinghong": [
+   "On the Mekong River in the green tropical far south of Yunnan, about 40 miles from the Myanmar border.",
+   100.8,
+   22.0,
+   "Mekong River"
+  ],
+  "Shangri-La": [
+   "On a high Tibetan-style plateau in Yunnan's far northwest, between the deep gorges of the Yangtze and the Mekong.",
+   100.0,
+   27.3,
+   "Yangtze gorge"
+  ],
+  "Tengchong": [
+   "In Yunnan's far west near the Myanmar border, among old volcanic cones west of the deep Salween River gorge.",
+   98.95,
+   25.0,
+   "Salween River gorge"
+  ]
  }
 }
