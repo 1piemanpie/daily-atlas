@@ -13,15 +13,15 @@ import { geoProject } from 'd3-geo-projection';
 const html = fs.readFileSync('../src/daily-atlas.html', 'utf8');
 const grab = name => { const i = html.indexOf(`const ${name} = `) + name.length + 9; return JSON.parse(html.slice(i, html.indexOf('\n', i)).replace(/;$/, '')); };
 const usNames = Object.fromEntries([...html.match(/const STATE_NAMES = \{([^}]*)\}/)[1].matchAll(/(\w+):"([^"]+)"/g)].map(m => [m[1], m[2]]));
-const UK = grab('UK'), MX = grab('MX'), IN = grab('IN'), CA = grab('CA');
-const VIEWS = { us: [grab('PIN'), usNames], uk: [UK.pin, UK.names], mx: [MX.pin, { CMX: 'Mexico', YUC: 'Mexico', JAL: 'Mexico', CUB: 'Cuba', JAM: 'Jamaica', PRI: 'Puerto Rico' }], in: [IN.pin, { DL: 'India', MH: 'India', RJ: 'India', KL: 'India', WB: 'India', PB: 'India' }], ca: [CA.pin, CA.names] };
+const UK = grab('UK'), MX = grab('MX'), IN = grab('IN'), CA = grab('CA'), CN = grab('CN');
+const VIEWS = { us: [grab('PIN'), usNames], uk: [UK.pin, UK.names], mx: [MX.pin, { CMX: 'Mexico', YUC: 'Mexico', JAL: 'Mexico', CUB: 'Cuba', JAM: 'Jamaica', PRI: 'Puerto Rico' }], in: [IN.pin, { DL: 'India', MH: 'India', RJ: 'India', KL: 'India', WB: 'India', PB: 'India' }], ca: [CA.pin, CA.names], cn: [CN.pin, { BJ: 'China', SH: 'China', SC: 'China', HKG: 'China', XJ: 'China', YN: 'China' }] };
 
 const r3 = v => Math.round(v * 1000) / 1000;
 const ll = {};
 for (const [map, [pin, names]] of Object.entries(VIEWS)) {
   ll[map] = {};
   for (const [st, list] of Object.entries(pin.cities)) for (const [city, x, y] of list) {
-    const [lon, lat] = P[{ in: 'india', ca: 'canada' }[map] || map].invert([x, y]);
+    const [lon, lat] = P[{ in: 'india', ca: 'canada', cn: 'china' }[map] || map].invert([x, y]);
     ll[map][city] = [r3(lat), r3(lon), names[st] || st];
   }
 }
