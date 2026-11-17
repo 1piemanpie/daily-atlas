@@ -20,5 +20,8 @@ export const canada = geoConicConformal().parallels([49, 77]).rotate([96, 0]).fi
 const cnBox = { type: 'MultiPoint', coordinates: [[72, 17], [72, 54], [136, 54], [136, 17], [104, 55], [104, 15]] };
 export const china = geoConicConformal().parallels([25, 47]).rotate([-104, 0]).fitWidth(800, cnBox);
 
+const itBox = { type: 'MultiPoint', coordinates: [[5.5, 35.3], [5.5, 47.6], [19.5, 47.6], [19.5, 35.3], [12.5, 48], [12.5, 35]] };
+export const italy = geoConicConformal().parallels([38, 46]).rotate([-12.5, 0]).fitWidth(800, itBox);
+
 export const params = p => ({ scale: p.scale(), translate: p.translate(), rotate: p.rotate(), parallels: p.parallels ? p.parallels() : null });
 export { geoPath };

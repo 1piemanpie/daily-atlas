@@ -7553,7 +7553,38 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-12-07",
+     "place": "Lazio",
+     "day": "rome"
+    },
+    {
+     "date": "2026-12-08",
+     "place": "Tuscany",
+     "day": "tuscany"
+    },
+    {
+     "date": "2026-12-09",
+     "place": "Veneto",
+     "day": "venice"
+    },
+    {
+     "date": "2026-12-10",
+     "place": "Sicily",
+     "day": "sicily"
+    },
+    {
+     "date": "2026-12-11",
+     "place": "Campania",
+     "day": "naples"
+    },
+    {
+     "date": "2026-12-12",
+     "place": "Lombardy",
+     "day": "milan"
+    }
+   ]
   },
   "JAM": {
    "name": "Jamaica",
