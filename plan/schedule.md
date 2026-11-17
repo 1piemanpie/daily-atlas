@@ -12,13 +12,13 @@ When a week is written, move it to "Done" with its places, then add a new week t
 | 2026-11-16 | hard | India | Delhi, Mumbai (Maharashtra), Rajasthan, Kerala, Kolkata (West Bengal), Punjab |
 | 2026-11-23 | easy | Canada | Quebec, Toronto & Niagara (Ontario), British Columbia, Nova Scotia, Alberta, Newfoundland & Labrador |
 | 2026-11-30 | hard | China | Beijing, Shanghai, Sichuan, Hong Kong, Xinjiang, Yunnan |
+| 2026-12-07 | easy | Italy | Rome (Lazio), Tuscany, Venice (Veneto), Sicily, Naples (Campania), Milan (Lombardy) |
 
 The first three weeks were all easy, so the queue starts with a hard week and alternates from there.
 
 ## Queue
 | Week of | Tier | Region | Ideas for the six places |
 |---|---|---|---|
-| 2026-12-07 | easy | Italy | Rome (Lazio), Tuscany, Venice (Veneto), Sicily, Naples (Campania), Milan (Lombardy) |
 | 2026-12-14 | hard | Japan | Tokyo, Kyoto, Hokkaido, Okinawa, Osaka, Hiroshima |
 | 2026-12-21 | easy | Germany & Austria (Christmas markets week) | Bavaria, Berlin, Vienna, Salzburg, Hamburg, the Rhineland |
 | 2026-12-28 | hard | Australia & New Zealand | New South Wales, Victoria, Queensland, Western Australia, North Island, South Island |
@@ -33,3 +33,4 @@ The first three weeks were all easy, so the queue starts with a hard week and al
 | 2027-03-01 | easy | Andes (Peru, Chile, Argentina) | Cusco & Machu Picchu, Lima, Santiago, Patagonia, Buenos Aires, Mendoza |
 | 2027-03-08 | hard | East Africa | Kenya (Nairobi), Tanzania (Kilimanjaro & Zanzibar), Ethiopia (Addis Ababa), Uganda, Rwanda, Madagascar |
 | 2027-03-15 | easy | Scandinavia | Stockholm, Oslo & the fjords, Copenhagen, Iceland, Lapland, Gothenburg & the west coast |
+| 2027-03-22 | hard | Turkey & the Caucasus | Istanbul, Cappadocia, Ankara & the Black Sea coast, Georgia (Tbilisi), Armenia (Yerevan), Azerbaijan (Baku) |

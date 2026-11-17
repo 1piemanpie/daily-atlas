@@ -1667,5 +1667,223 @@
    25.0,
    "Salween River gorge"
   ]
+ },
+ "it": {
+  "Rome": [
+   "On the Tiber River about 15 miles from the sea, about 20 miles southeast of the big round crater lake, Lake Bracciano.",
+   12.23,
+   42.12,
+   "Lake Bracciano"
+  ],
+  "Latina": [
+   "On a flat plain of drained marshland a few miles inland, about 35 miles southeast of Rome and north of the bulging Monte Circeo headland.",
+   13.05,
+   41.24,
+   "Monte Circeo"
+  ],
+  "Viterbo": [
+   "In northern Lazio about 15 miles southeast of Lake Bolsena, the huge round lake in an old volcano.",
+   11.93,
+   42.6,
+   "Lake Bolsena"
+  ],
+  "Frosinone": [
+   "Inland in a valley about 50 miles southeast of Rome, about 25 miles north of the coast at Terracina.",
+   13.25,
+   41.29,
+   "Coast at Terracina"
+  ],
+  "Civitavecchia": [
+   "Rome's cruise port, on the coast about 20 miles west of Lake Bracciano, the big round crater lake.",
+   12.23,
+   42.12,
+   "Lake Bracciano"
+  ],
+  "Rieti": [
+   "In a flat basin in the hills about 40 miles northeast of Rome, about 14 miles north of the long, thin Lake Turano.",
+   12.96,
+   42.21,
+   "Lake Turano"
+  ],
+  "Florence": [
+   "In a bowl of hills at the foot of the Apennines, about 60 miles northwest of Lake Trasimeno, the big lake in Umbria.",
+   12.1,
+   43.13,
+   "Lake Trasimeno"
+  ],
+  "Pisa": [
+   "On the flat plain about 6 miles in from the coast, about 8 miles south of Lake Massaciuccoli.",
+   10.33,
+   43.83,
+   "Lake Massaciuccoli"
+  ],
+  "Siena": [
+   "On hilltops in the middle of Tuscany, about 30 miles north of Monte Amiata, a big lone old volcano.",
+   11.62,
+   42.89,
+   "Monte Amiata"
+  ],
+  "Livorno": [
+   "A port on the coast about 12 miles south of Pisa, about 20 miles east of the small island of Gorgona.",
+   9.9,
+   43.43,
+   "Gorgona island"
+  ],
+  "Lucca": [
+   "At the foot of the mountains about 9 miles east of Lake Massaciuccoli, which lies just behind the coast.",
+   10.33,
+   43.83,
+   "Lake Massaciuccoli"
+  ],
+  "Arezzo": [
+   "In eastern Tuscany, about 25 miles northwest of Lake Trasimeno, the big lake in Umbria.",
+   12.1,
+   43.13,
+   "Lake Trasimeno"
+  ],
+  "Venice": [
+   "On islands in a big lagoon at the top of the Adriatic, joined to the mainland by a long bridge.",
+   12.33,
+   45.43,
+   "Venetian Lagoon"
+  ],
+  "Verona": [
+   "Where the Adige River leaves the Alps, about 15 miles east of the southern end of Lake Garda.",
+   10.69,
+   45.46,
+   "South end of Lake Garda"
+  ],
+  "Padua": [
+   "On the flat plain about 22 miles west of Venice, about 10 miles northeast of the Euganean Hills, old volcanoes rising from the plain.",
+   11.7,
+   45.32,
+   "Euganean Hills"
+  ],
+  "Vicenza": [
+   "About 30 miles west of Venice, just north of the Berici Hills and south of the Alps.",
+   11.55,
+   45.45,
+   "Berici Hills"
+  ],
+  "Treviso": [
+   "On the plain about 16 miles north of Venice and its lagoon.",
+   12.33,
+   45.43,
+   "Venetian Lagoon"
+  ],
+  "Belluno": [
+   "In a valley at the edge of the Dolomites about 55 miles north of Venice, about 8 miles west of Lake Santa Croce.",
+   12.35,
+   46.11,
+   "Lake Santa Croce"
+  ],
+  "Palermo": [
+   "On a wide bay on Sicily's north coast, toward the western end, right under the headland of Monte Pellegrino.",
+   13.35,
+   38.17,
+   "Monte Pellegrino"
+  ],
+  "Catania": [
+   "On the east coast at the southern foot of Mount Etna, the huge volcano about 17 miles to the north-northwest.",
+   14.9934,
+   37.751,
+   "Mount Etna"
+  ],
+  "Messina": [
+   "At Sicily's northeast tip on the narrow strait, about 3 miles across from the toe of Italy's boot.",
+   15.62,
+   38.25,
+   "Strait of Messina"
+  ],
+  "Syracuse": [
+   "On the southeast coast about 30 miles south of Catania, partly on the small island of Ortygia.",
+   15.293,
+   37.06,
+   "Ortygia"
+  ],
+  "Agrigento": [
+   "Near the middle of Sicily's south coast, on a ridge a few miles inland from the sea.",
+   13.585,
+   37.29,
+   "Valley of the Temples"
+  ],
+  "Trapani": [
+   "On a sickle-shaped point at Sicily's western tip, facing the Egadi Islands just offshore.",
+   12.33,
+   37.97,
+   "Egadi Islands"
+  ],
+  "Naples": [
+   "On a big bay, with the cone of Mount Vesuvius about 8 miles to the southeast.",
+   14.426,
+   40.821,
+   "Mount Vesuvius"
+  ],
+  "Salerno": [
+   "At the top corner of the Gulf of Salerno, at the east end of the mountainous peninsula with the Amalfi Coast.",
+   14.75,
+   40.55,
+   "Gulf of Salerno"
+  ],
+  "Caserta": [
+   "On the plain about 15 miles north of Naples, at the foot of the hills, with a huge royal palace and a long straight garden.",
+   14.326,
+   41.073,
+   "Royal Palace of Caserta"
+  ],
+  "Benevento": [
+   "Inland in the Apennine hills, about 28 miles northeast of Mount Vesuvius.",
+   14.426,
+   40.821,
+   "Mount Vesuvius"
+  ],
+  "Avellino": [
+   "In a green basin in the mountains about 20 miles east of Mount Vesuvius.",
+   14.426,
+   40.821,
+   "Mount Vesuvius"
+  ],
+  "Sorrento": [
+   "On cliffs on the north shore of the long peninsula south of Naples, about 6 miles from its tip.",
+   14.33,
+   40.57,
+   "Punta Campanella"
+  ],
+  "Milan": [
+   "On the flat Po plain about 30 miles southeast of the bottom tip of Lake Maggiore.",
+   8.63,
+   45.73,
+   "South tip of Lake Maggiore"
+  ],
+  "Bergamo": [
+   "At the foot of the Alps about 30 miles northeast of Milan, about 20 miles west of Lake Iseo.",
+   10.07,
+   45.73,
+   "Lake Iseo"
+  ],
+  "Brescia": [
+   "At the foot of the Alps about 19 miles west of the wide southern end of Lake Garda.",
+   10.6,
+   45.55,
+   "Lake Garda"
+  ],
+  "Cremona": [
+   "On the north bank of the Po River, about 45 miles southeast of Milan.",
+   10.02,
+   45.12,
+   "Po River"
+  ],
+  "Pavia": [
+   "On the Ticino River just above where it joins the Po, about 19 miles south of Milan.",
+   9.2,
+   45.14,
+   "Ticino meets the Po"
+  ],
+  "Varese": [
+   "Beside small Lake Varese, just east of Lake Maggiore, about 30 miles northwest of Milan.",
+   8.73,
+   45.81,
+   "Lake Varese"
+  ]
  }
 }
