@@ -7941,7 +7941,38 @@
      ]
     }
    ],
-   "visits": []
+   "visits": [
+    {
+     "date": "2026-12-14",
+     "place": "Tokyo",
+     "day": "tokyo"
+    },
+    {
+     "date": "2026-12-15",
+     "place": "Kyōto Prefecture",
+     "day": "kyoto"
+    },
+    {
+     "date": "2026-12-16",
+     "place": "Hokkaidō",
+     "day": "hokkaido"
+    },
+    {
+     "date": "2026-12-17",
+     "place": "Okinawa Prefecture",
+     "day": "okinawa"
+    },
+    {
+     "date": "2026-12-18",
+     "place": "Ōsaka Prefecture",
+     "day": "osaka"
+    },
+    {
+     "date": "2026-12-19",
+     "place": "Hiroshima Prefecture",
+     "day": "hiroshima"
+    }
+   ]
   },
   "JEY": {
    "name": "Jersey",

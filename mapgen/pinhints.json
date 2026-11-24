@@ -1885,5 +1885,223 @@
    45.81,
    "Lake Varese"
   ]
+ },
+ "jp": {
+  "Tokyo": [
+   "On the northwest shore of Tokyo Bay, where several rivers flow into the top of the bay.",
+   139.85,
+   35.55,
+   "Tokyo Bay"
+  ],
+  "Chiba": [
+   "On the northeast shore of Tokyo Bay, about 20 miles east of central Tokyo.",
+   139.95,
+   35.55,
+   "Tokyo Bay"
+  ],
+  "Saitama": [
+   "On the flat Kanto Plain about 20 miles north of the top of Tokyo Bay.",
+   139.85,
+   35.62,
+   "Head of Tokyo Bay"
+  ],
+  "Hachioji": [
+   "Where the Kanto Plain meets the western mountains, about 16 miles east-southeast of Lake Okutama.",
+   139.05,
+   35.78,
+   "Lake Okutama"
+  ],
+  "Tsukuba": [
+   "On the plain about 15 miles west of Lake Kasumigaura, Japan's second-largest lake.",
+   140.38,
+   36.05,
+   "Lake Kasumigaura"
+  ],
+  "Narita": [
+   "Home of a big international airport, about 14 miles south of the bottom of Lake Kasumigaura.",
+   140.4,
+   35.97,
+   "Lake Kasumigaura"
+  ],
+  "Kyoto": [
+   "In a basin ringed by hills on three sides, about 7 miles west of the southern tip of Lake Biwa.",
+   135.9,
+   35.0,
+   "Southern tip of Lake Biwa"
+  ],
+  "Otsu": [
+   "On the southwest shore of Lake Biwa, Japan's largest lake.",
+   135.95,
+   35.1,
+   "Lake Biwa"
+  ],
+  "Uji": [
+   "On a river in the tea-growing hills about 10 miles southwest of Lake Biwa's southern tip.",
+   135.9,
+   35.0,
+   "Southern tip of Lake Biwa"
+  ],
+  "Maizuru": [
+   "A port at the head of a sheltered, branching bay on the Sea of Japan coast.",
+   135.35,
+   35.5,
+   "Maizuru Bay"
+  ],
+  "Fukuchiyama": [
+   "Inland in a river basin about 18 miles southwest of Maizuru Bay on the Sea of Japan coast.",
+   135.35,
+   35.5,
+   "Maizuru Bay"
+  ],
+  "Kameoka": [
+   "In a small basin over the hills from Kyoto, about 20 miles west of Lake Biwa's southern tip.",
+   135.9,
+   35.0,
+   "Southern tip of Lake Biwa"
+  ],
+  "Sapporo": [
+   "On a plain near the Sea of Japan coast, about 20 miles north of the big round crater lake, Lake Shikotsu.",
+   141.33,
+   42.77,
+   "Lake Shikotsu"
+  ],
+  "Hakodate": [
+   "On a narrow neck of land at Hokkaido's southern tip, facing the strait across to Honshu.",
+   140.7,
+   41.6,
+   "Tsugaru Strait"
+  ],
+  "Asahikawa": [
+   "In a big inland basin in the middle of the island, about 25 miles west of the Daisetsuzan volcanoes.",
+   142.85,
+   43.66,
+   "Daisetsuzan volcanoes"
+  ],
+  "Kushiro": [
+   "On the Pacific coast in the southeast, at the south edge of the huge Kushiro Marsh.",
+   144.4,
+   43.1,
+   "Kushiro Marsh"
+  ],
+  "Obihiro": [
+   "In the wide, flat Tokachi plain, about 55 miles south-southeast of the Daisetsuzan volcanoes.",
+   142.85,
+   43.66,
+   "Daisetsuzan volcanoes"
+  ],
+  "Wakkanai": [
+   "At the very northern tip of Japan, beside Cape Soya, facing the strait to the north.",
+   141.94,
+   45.52,
+   "Cape Soya"
+  ],
+  "Naha": [
+   "On the southwest coast of Okinawa Island, about 24 miles east of the little Kerama Islands.",
+   127.3,
+   26.2,
+   "Kerama Islands"
+  ],
+  "Okinawa City": [
+   "In the middle of Okinawa Island, just north of wide Nakagusuku Bay on the east coast.",
+   127.85,
+   26.25,
+   "Nakagusuku Bay"
+  ],
+  "Nago": [
+   "On the northwest coast, at the base of the wide Motobu Peninsula that juts out to the west.",
+   127.9,
+   26.66,
+   "Motobu Peninsula"
+  ],
+  "Itoman": [
+   "Near the southern tip of Okinawa Island, on the west coast south of Naha.",
+   127.71,
+   26.08,
+   "Southern tip of Okinawa"
+  ],
+  "Uruma": [
+   "On the east coast at the base of the long, thin Katsuren Peninsula pointing into the Pacific.",
+   127.93,
+   26.32,
+   "Katsuren Peninsula"
+  ],
+  "Motobu": [
+   "Out on the Motobu Peninsula in the northwest, across from little Ie Island with its lone peak.",
+   127.8,
+   26.72,
+   "Ie Island"
+  ],
+  "Osaka": [
+   "At the head of Osaka Bay, where the Yodo River flows in.",
+   135.3,
+   34.55,
+   "Osaka Bay"
+  ],
+  "Sakai": [
+   "On the east shore of Osaka Bay, just south of Osaka.",
+   135.3,
+   34.55,
+   "Osaka Bay"
+  ],
+  "Wakayama": [
+   "At the mouth of the Kino River, on the strait at the southern entrance to Osaka Bay.",
+   135.14,
+   34.22,
+   "Mouth of the Kino River"
+  ],
+  "Kishiwada": [
+   "On the southeast shore of Osaka Bay, across the water from long Awaji Island.",
+   134.85,
+   34.4,
+   "Awaji Island"
+  ],
+  "Takatsuki": [
+   "On the plain about 12 miles northeast of Osaka, beside the Yodo River.",
+   135.62,
+   34.82,
+   "Yodo River"
+  ],
+  "Hashimoto": [
+   "Inland in the Kino River valley, about 20 miles south of Osaka beyond a ridge of hills.",
+   135.6,
+   34.31,
+   "Kino River valley"
+  ],
+  "Hiroshima": [
+   "On a river delta that splits into fingers, on the north shore of a calm sea dotted with islands.",
+   132.45,
+   34.36,
+   "Ota River delta"
+  ],
+  "Kure": [
+   "An old navy port on a sheltered bay about 12 miles southeast of Hiroshima, just east of Etajima island.",
+   132.45,
+   34.22,
+   "Etajima island"
+  ],
+  "Fukuyama": [
+   "Near the coast about 10 miles east of the narrow channel at Onomichi.",
+   133.2,
+   34.4,
+   "Onomichi channel"
+  ],
+  "Onomichi": [
+   "On a narrow channel between islands, where a chain of bridges hops south across to Shikoku.",
+   133.1,
+   34.3,
+   "Island chain to Shikoku"
+  ],
+  "Okayama": [
+   "On the plain near the coast, about 17 miles north of the long bridge chain across to Shikoku.",
+   133.81,
+   34.4,
+   "Bridges to Shikoku"
+  ],
+  "Matsuyama": [
+   "On the northwest coast of Shikoku island, about 40 miles south of Hiroshima across the water.",
+   132.7,
+   33.88,
+   "Shikoku's northwest coast"
+  ]
  }
 }
